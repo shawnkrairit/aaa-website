@@ -207,51 +207,109 @@
     </section>
 
     <!-- ══════════════════════════════════════════════════════════════
-         SECTION 5 — Values
+         SECTION 5 — Values (Flip Cards)
     ══════════════════════════════════════════════════════════════ -->
-    <section class="bg-surface section-padding">
-      <div class="container-narrow">
-        <div class="text-center mb-16" data-animate="fadeUp">
+    <section class="bg-navy section-padding relative overflow-hidden">
+      <!-- Subtle background pattern -->
+      <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+
+      <div class="container-narrow relative z-10">
+        <!-- Header -->
+        <div class="text-center mb-16" data-animate>
           <div class="gold-accent mx-auto mb-6"></div>
-          <h2>Our Values</h2>
+          <h2 class="text-white mb-4">Our Values</h2>
+          <p class="text-white/50 font-body text-[0.9375rem] max-w-2xl mx-auto leading-relaxed">
+            The principles that guide every member firm and define our commitment to clients across Southeast Asia.
+          </p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" data-stagger>
-          <!-- Independence -->
-          <div class="card text-center">
-            <div class="flex justify-center mb-5">
-              <i data-lucide="shield" class="w-8 h-8 text-gold"></i>
+        <!-- 4 Flip Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" data-stagger>
+
+          <!-- Card 1: Independence -->
+          <div class="h-72 cursor-pointer group" style="perspective:1000px">
+            <div class="relative w-full h-full transition-transform duration-500 group-hover:[transform:rotateY(180deg)]" style="transform-style:preserve-3d">
+              <!-- Front -->
+              <div class="absolute inset-0 flex flex-col items-center justify-center p-6 bg-white/[0.05] border border-white/10" style="backface-visibility:hidden">
+                <div class="w-14 h-14 flex items-center justify-center border border-gold/30 rounded-full mb-5">
+                  <i data-lucide="shield" class="w-6 h-6 text-gold"></i>
+                </div>
+                <h4 class="text-white font-heading text-lg text-center">Independence</h4>
+              </div>
+              <!-- Back -->
+              <div class="absolute inset-0 flex flex-col items-center justify-center p-6 bg-gold" style="backface-visibility:hidden; transform:rotateY(180deg)">
+                <div class="w-14 h-14 flex items-center justify-center border border-white/30 rounded-full mb-5">
+                  <i data-lucide="shield" class="w-6 h-6 text-white"></i>
+                </div>
+                <h4 class="text-white font-heading text-lg text-center mb-3">Independence</h4>
+                <p class="text-white/80 text-xs font-body text-center leading-relaxed">Each member firm maintains full independence while benefiting from the strength of the alliance.</p>
+              </div>
             </div>
-            <h3 class="text-lg mb-3">Independence</h3>
-            <p class="text-text-muted text-sm leading-relaxed">Each member firm maintains full independence while benefiting from the strength of the alliance.</p>
           </div>
 
-          <!-- Excellence -->
-          <div class="card text-center">
-            <div class="flex justify-center mb-5">
-              <i data-lucide="award" class="w-8 h-8 text-gold"></i>
+          <!-- Card 2: Excellence -->
+          <div class="h-72 cursor-pointer group" style="perspective:1000px">
+            <div class="relative w-full h-full transition-transform duration-500 group-hover:[transform:rotateY(180deg)]" style="transform-style:preserve-3d">
+              <!-- Front -->
+              <div class="absolute inset-0 flex flex-col items-center justify-center p-6 bg-white/[0.05] border border-white/10" style="backface-visibility:hidden">
+                <div class="w-14 h-14 flex items-center justify-center border border-gold/30 rounded-full mb-5">
+                  <i data-lucide="award" class="w-6 h-6 text-gold"></i>
+                </div>
+                <h4 class="text-white font-heading text-lg text-center">Excellence</h4>
+              </div>
+              <!-- Back -->
+              <div class="absolute inset-0 flex flex-col items-center justify-center p-6 bg-gold" style="backface-visibility:hidden; transform:rotateY(180deg)">
+                <div class="w-14 h-14 flex items-center justify-center border border-white/30 rounded-full mb-5">
+                  <i data-lucide="award" class="w-6 h-6 text-white"></i>
+                </div>
+                <h4 class="text-white font-heading text-lg text-center mb-3">Excellence</h4>
+                <p class="text-white/80 text-xs font-body text-center leading-relaxed">Invitation-only membership ensures consistently high standards of legal service across the network.</p>
+              </div>
             </div>
-            <h3 class="text-lg mb-3">Excellence</h3>
-            <p class="text-text-muted text-sm leading-relaxed">Invitation-only membership ensures consistently high standards of legal service across the network.</p>
           </div>
 
-          <!-- Integrity -->
-          <div class="card text-center">
-            <div class="flex justify-center mb-5">
-              <i data-lucide="heart" class="w-8 h-8 text-gold"></i>
+          <!-- Card 3: Integrity -->
+          <div class="h-72 cursor-pointer group" style="perspective:1000px">
+            <div class="relative w-full h-full transition-transform duration-500 group-hover:[transform:rotateY(180deg)]" style="transform-style:preserve-3d">
+              <!-- Front -->
+              <div class="absolute inset-0 flex flex-col items-center justify-center p-6 bg-white/[0.05] border border-white/10" style="backface-visibility:hidden">
+                <div class="w-14 h-14 flex items-center justify-center border border-gold/30 rounded-full mb-5">
+                  <i data-lucide="heart" class="w-6 h-6 text-gold"></i>
+                </div>
+                <h4 class="text-white font-heading text-lg text-center">Integrity</h4>
+              </div>
+              <!-- Back -->
+              <div class="absolute inset-0 flex flex-col items-center justify-center p-6 bg-gold" style="backface-visibility:hidden; transform:rotateY(180deg)">
+                <div class="w-14 h-14 flex items-center justify-center border border-white/30 rounded-full mb-5">
+                  <i data-lucide="heart" class="w-6 h-6 text-white"></i>
+                </div>
+                <h4 class="text-white font-heading text-lg text-center mb-3">Integrity</h4>
+                <p class="text-white/80 text-xs font-body text-center leading-relaxed">We uphold the highest ethical standards in every jurisdiction we serve.</p>
+              </div>
             </div>
-            <h3 class="text-lg mb-3">Integrity</h3>
-            <p class="text-text-muted text-sm leading-relaxed">We uphold the highest ethical standards in every jurisdiction we serve.</p>
           </div>
 
-          <!-- Collaboration -->
-          <div class="card text-center">
-            <div class="flex justify-center mb-5">
-              <i data-lucide="handshake" class="w-8 h-8 text-gold"></i>
+          <!-- Card 4: Collaboration -->
+          <div class="h-72 cursor-pointer group" style="perspective:1000px">
+            <div class="relative w-full h-full transition-transform duration-500 group-hover:[transform:rotateY(180deg)]" style="transform-style:preserve-3d">
+              <!-- Front -->
+              <div class="absolute inset-0 flex flex-col items-center justify-center p-6 bg-white/[0.05] border border-white/10" style="backface-visibility:hidden">
+                <div class="w-14 h-14 flex items-center justify-center border border-gold/30 rounded-full mb-5">
+                  <i data-lucide="handshake" class="w-6 h-6 text-gold"></i>
+                </div>
+                <h4 class="text-white font-heading text-lg text-center">Collaboration</h4>
+              </div>
+              <!-- Back -->
+              <div class="absolute inset-0 flex flex-col items-center justify-center p-6 bg-gold" style="backface-visibility:hidden; transform:rotateY(180deg)">
+                <div class="w-14 h-14 flex items-center justify-center border border-white/30 rounded-full mb-5">
+                  <i data-lucide="handshake" class="w-6 h-6 text-white"></i>
+                </div>
+                <h4 class="text-white font-heading text-lg text-center mb-3">Collaboration</h4>
+                <p class="text-white/80 text-xs font-body text-center leading-relaxed">Our members actively share knowledge, referrals, and best practices for the benefit of all clients.</p>
+              </div>
             </div>
-            <h3 class="text-lg mb-3">Collaboration</h3>
-            <p class="text-text-muted text-sm leading-relaxed">Our members actively share knowledge, referrals, and best practices for the benefit of all clients.</p>
           </div>
+
         </div>
       </div>
     </section>
