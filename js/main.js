@@ -182,6 +182,34 @@ function initGuideToc() {
   });
 }
 
+/** Active page highlighting in navbar */
+function initActiveNav() {
+  const path = window.location.pathname.replace(/\/+$/, '') || '/';
+  const nav = document.querySelector('header nav');
+  if (!nav) return;
+
+  /* Desktop nav links */
+  nav.querySelectorAll('a').forEach(link => {
+    const href = link.getAttribute('href').replace(/\/+$/, '') || '/';
+    if (path === href || (href !== '/' && path.startsWith(href))) {
+      link.classList.remove('text-text-muted');
+      link.classList.add('text-navy', 'nav-active');
+    }
+  });
+
+  /* Dropdown button — highlight if child page is active */
+  nav.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+    const hasActive = dropdown.querySelector('.dropdown-panel a.nav-active');
+    if (hasActive) {
+      const btn = dropdown.querySelector('button');
+      if (btn) {
+        btn.classList.remove('text-text-muted');
+        btn.classList.add('text-navy', 'nav-active');
+      }
+    }
+  });
+}
+
 /* ── Init everything after DOM + partials load ── */
 window.addEventListener('DOMContentLoaded', () => {
   /* If partials aren't used (nav/footer inline), init directly */

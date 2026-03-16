@@ -1,17 +1,17 @@
 <!-- ── Footer Partial ── -->
 <footer class="bg-navy text-white">
-  <!-- Gold Gradient Line -->
-  <div class="h-1 bg-gradient-to-r from-gold via-gold-light to-gold"></div>
+  <!-- Gradient gold line divider (1px) -->
+  <div class="h-px bg-gradient-to-r from-transparent via-gold to-transparent"></div>
 
   <!-- Main Footer Content -->
-  <div class="max-w-[82rem] mx-auto px-6 py-16">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
+  <div class="container-narrow section-padding">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
       <!-- Column 1: Brand -->
-      <div>
+      <div class="lg:col-span-1">
         <!-- Logo (Light Variant) -->
-        <a href="/" class="inline-block mb-6 cursor-pointer" aria-label="AAA Home">
-          <svg viewBox="0 0 280 40" class="h-8 w-auto" fill="none" xmlns="http://www.w3.org/2000/svg"
+        <a href="/" class="inline-block mb-5 cursor-pointer" aria-label="AAA Home">
+          <svg viewBox="0 0 280 40" class="h-9 w-auto" fill="none" xmlns="http://www.w3.org/2000/svg"
                role="img" aria-label="ASEAN Attorneys Alliance">
             <!-- Stylized A mark -->
             <path d="M2 36L18 4L34 36H28L18 12L8 36H2Z" fill="#FFFFFF"/>
@@ -24,82 +24,89 @@
                   font-weight="500" letter-spacing="0.2em" fill="rgba(255,255,255,0.5)">A UNITY OF PROFICIENCY</text>
           </svg>
         </a>
-        <p class="text-sm leading-relaxed text-text-light opacity-70 max-w-xs">
+        <p class="text-white/50 text-sm leading-relaxed">
           The ASEAN Attorneys Alliance is a non-exclusive network of leading independent law firms across all 11 ASEAN member states.
         </p>
       </div>
 
       <!-- Column 2: Quick Links -->
       <div>
-        <h4 class="text-[0.6875rem] font-semibold tracking-[0.15em] uppercase text-white mb-6">Quick Links</h4>
+        <h4 class="label-text mb-6">Quick Links</h4>
         <ul class="space-y-3">
           <li>
             <a href="/about/"
-               class="link-underline text-sm text-text-light opacity-70 hover:opacity-100 transition-opacity">
+               class="text-white/50 hover:text-gold text-sm transition-colors cursor-pointer link-underline">
               About
             </a>
           </li>
           <li>
             <a href="/member-firms/"
-               class="link-underline text-sm text-text-light opacity-70 hover:opacity-100 transition-opacity">
+               class="text-white/50 hover:text-gold text-sm transition-colors cursor-pointer link-underline">
               Member Firms
             </a>
           </li>
           <li>
             <a href="/practice-areas/"
-               class="link-underline text-sm text-text-light opacity-70 hover:opacity-100 transition-opacity">
+               class="text-white/50 hover:text-gold text-sm transition-colors cursor-pointer link-underline">
               Practice Areas
             </a>
           </li>
           <li>
             <a href="/news/"
-               class="link-underline text-sm text-text-light opacity-70 hover:opacity-100 transition-opacity">
+               class="text-white/50 hover:text-gold text-sm transition-colors cursor-pointer link-underline">
               News &amp; Insights
             </a>
           </li>
           <li>
             <a href="/join/"
-               class="link-underline text-sm text-text-light opacity-70 hover:opacity-100 transition-opacity">
+               class="text-white/50 hover:text-gold text-sm transition-colors cursor-pointer link-underline">
               Join AAA
             </a>
           </li>
         </ul>
       </div>
 
-      <!-- Column 3: Contact -->
+      <!-- Column 3: Contact Us -->
       <div>
-        <h4 class="text-[0.6875rem] font-semibold tracking-[0.15em] uppercase text-white mb-6">Contact</h4>
-        <ul class="space-y-4">
+        <h4 class="label-text mb-6">Contact Us</h4>
+        <ul class="space-y-3">
           <li class="flex items-start gap-3">
             <i data-lucide="map-pin" class="w-4 h-4 text-gold flex-shrink-0 mt-0.5"></i>
-            <span class="text-sm text-text-light opacity-70 leading-relaxed">
+            <span class="text-white/50 text-sm">
               Charn Issara Tower 1, 2/Fl, 942/69 Rama IV Road, Bangkok 10500, Thailand
             </span>
           </li>
           <li class="flex items-center gap-3">
             <i data-lucide="phone" class="w-4 h-4 text-gold flex-shrink-0"></i>
             <a href="tel:+6622330055"
-               class="text-sm text-text-light opacity-70 hover:opacity-100 transition-opacity">
+               class="text-white/50 hover:text-white text-sm transition-colors cursor-pointer">
               +66 (0) 2233 0055
             </a>
           </li>
           <li class="flex items-center gap-3">
             <i data-lucide="mail" class="w-4 h-4 text-gold flex-shrink-0"></i>
             <a href="mailto:info@aseanattorneysalliance.com"
-               class="text-sm text-text-light opacity-70 hover:opacity-100 transition-opacity break-all">
+               class="text-white/50 hover:text-white text-sm transition-colors cursor-pointer">
               info@aseanattorneysalliance.com
             </a>
           </li>
         </ul>
       </div>
 
-    </div>
-  </div>
+      <!-- Column 4: Language -->
+      <div>
+        <h4 class="label-text mb-6">Language</h4>
+        <div class="inline-flex items-center gap-2 px-4 py-2.5 border border-white/20 text-white/70 text-sm cursor-default">
+          <span class="text-[0.6875rem] font-semibold tracking-[0.1em] uppercase">English</span>
+          <i data-lucide="chevron-down" class="w-3 h-3 opacity-50"></i>
+        </div>
+      </div>
 
-  <!-- Bottom Copyright Bar -->
-  <div class="border-t border-white/10">
-    <div class="max-w-[82rem] mx-auto px-6 py-6">
-      <p class="text-[0.75rem] text-text-light opacity-50 text-center">
+    </div>
+
+    <!-- Bottom Copyright -->
+    <div class="mt-16 pt-8 border-t border-white/10 text-center">
+      <p class="text-white/30 text-xs tracking-wider uppercase">
         &copy; 2026 ASEAN Attorneys Alliance. All rights reserved.
       </p>
     </div>

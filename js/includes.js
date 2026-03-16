@@ -62,6 +62,11 @@
     initNavbar();
   }
 
+  /* Highlight active page in navbar */
+  if (typeof initActiveNav === 'function') {
+    initActiveNav();
+  }
+
   /* Remove loading class (anti-FOUC) */
   document.body.classList.remove('loading');
 })();

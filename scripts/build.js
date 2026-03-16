@@ -209,7 +209,7 @@ function buildMemberFirmsListing() {
     <!-- Page Header -->
     <section class="bg-navy py-24 lg:py-32 relative overflow-hidden">
       <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <img src="../images/asean-map.svg" class="w-[65%] h-auto opacity-[0.12]" alt="">
+        <img src="../images/asean-map.svg" class="w-[65%] h-auto opacity-[0.12] brightness-0 invert" alt="">
       </div>
       <div class="container-narrow text-center relative z-10" data-animate="fadeUp">
         <div class="gold-accent mx-auto mb-6"></div>
@@ -458,7 +458,7 @@ function buildBusinessGuidesListing(guideSummaries) {
     <!-- Page Header -->
     <section class="bg-navy py-24 lg:py-32 relative overflow-hidden">
       <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <img src="../images/asean-map.svg" class="w-[65%] h-auto opacity-[0.12]" alt="">
+        <img src="../images/asean-map.svg" class="w-[65%] h-auto opacity-[0.12] brightness-0 invert" alt="">
       </div>
       <div class="container-narrow text-center relative z-10" data-animate="fadeUp">
         <div class="gold-accent mx-auto mb-6"></div>
