@@ -53,6 +53,51 @@ function initNavbar() {
       if (chevron) chevron.classList.toggle('rotate-180');
     });
   });
+
+  /* Desktop dropdown — JS click toggle + hover with 150ms leave delay */
+  document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+    let timeout = null;
+    const btn = dropdown.querySelector('button');
+    const chevron = btn ? btn.querySelector('[data-lucide="chevron-down"]') : null;
+
+    const open = () => {
+      if (timeout) { clearTimeout(timeout); timeout = null; }
+      dropdown.classList.add('is-open');
+      if (chevron) chevron.style.transform = 'rotate(180deg)';
+      if (btn) btn.setAttribute('aria-expanded', 'true');
+    };
+
+    const close = () => {
+      dropdown.classList.remove('is-open');
+      if (chevron) chevron.style.transform = '';
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+    };
+
+    const delayedClose = () => {
+      timeout = setTimeout(close, 150);
+    };
+
+    /* Click toggle */
+    if (btn) {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (dropdown.classList.contains('is-open')) {
+          close();
+        } else {
+          open();
+        }
+      });
+    }
+
+    /* Hover with delay */
+    dropdown.addEventListener('mouseenter', open);
+    dropdown.addEventListener('mouseleave', delayedClose);
+
+    /* Close on outside click */
+    document.addEventListener('click', (e) => {
+      if (!dropdown.contains(e.target)) close();
+    });
+  });
 }
 
 /** FAQ Accordion */

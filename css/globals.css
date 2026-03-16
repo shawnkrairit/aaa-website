@@ -213,12 +213,26 @@ a { transition: color 200ms ease-out; }
   opacity: 0;
   transform: translateY(8px);
   pointer-events: none;
-  transition: opacity 0.15s ease-out, transform 0.15s ease-out;
+  transition: opacity 0.15s ease-out 0.15s, transform 0.15s ease-out 0.15s;
 }
 .nav-dropdown:hover .dropdown-panel,
 .nav-dropdown.is-open .dropdown-panel {
   opacity: 1;
   transform: translateY(0);
+  pointer-events: auto;
+  transition-delay: 0s;
+}
+/* Invisible bridge so mouse can travel from button to panel */
+.nav-dropdown::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 0.75rem;
+  pointer-events: none;
+}
+.nav-dropdown:hover::after {
   pointer-events: auto;
 }
 

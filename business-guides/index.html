@@ -57,8 +57,12 @@
   <main>
 
     <!-- Page Header -->
-    <section class="bg-navy py-24 lg:py-32">
-      <div class="container-narrow text-center" data-animate="fadeUp">
+    <section class="bg-navy py-24 lg:py-32 relative overflow-hidden">
+      <!-- ASEAN Map Background -->
+      <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <img src="../images/asean-map.svg" class="w-[65%] h-auto opacity-[0.12]" alt="">
+      </div>
+      <div class="container-narrow text-center relative z-10" data-animate="fadeUp">
         <div class="gold-accent mx-auto mb-6"></div>
         <h1 class="text-white mb-6">Doing Business in ASEAN</h1>
         <p class="text-text-light max-w-3xl mx-auto text-base lg:text-lg leading-relaxed">

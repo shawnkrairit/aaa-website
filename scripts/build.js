@@ -207,8 +207,11 @@ function buildMemberFirmsListing() {
   const html = `${htmlHead("Member Firms", "Our network of leading independent law firms spans all 11 ASEAN member states.", 1)}
 
     <!-- Page Header -->
-    <section class="bg-navy py-24 lg:py-32">
-      <div class="container-narrow text-center" data-animate="fadeUp">
+    <section class="bg-navy py-24 lg:py-32 relative overflow-hidden">
+      <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <img src="../images/asean-map.svg" class="w-[65%] h-auto opacity-[0.12]" alt="">
+      </div>
+      <div class="container-narrow text-center relative z-10" data-animate="fadeUp">
         <div class="gold-accent mx-auto mb-6"></div>
         <h1 class="text-white mb-6">Member Firms</h1>
         <p class="text-text-light max-w-2xl mx-auto text-base lg:text-lg leading-relaxed">
@@ -453,8 +456,11 @@ function buildBusinessGuidesListing(guideSummaries) {
   const html = `${htmlHead("Doing Business in ASEAN", "Comprehensive jurisdiction-by-jurisdiction guides covering legal frameworks, business entity formation, taxation, and more.", 1)}
 
     <!-- Page Header -->
-    <section class="bg-navy py-24 lg:py-32">
-      <div class="container-narrow text-center" data-animate="fadeUp">
+    <section class="bg-navy py-24 lg:py-32 relative overflow-hidden">
+      <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <img src="../images/asean-map.svg" class="w-[65%] h-auto opacity-[0.12]" alt="">
+      </div>
+      <div class="container-narrow text-center relative z-10" data-animate="fadeUp">
         <div class="gold-accent mx-auto mb-6"></div>
         <h1 class="text-white mb-6">Doing Business in ASEAN</h1>
         <p class="text-text-light max-w-3xl mx-auto text-base lg:text-lg leading-relaxed">

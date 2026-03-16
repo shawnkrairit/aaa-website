@@ -60,8 +60,12 @@
     <!-- ═══════════════════════════════════════════════════════════════
          1. PAGE HEADER
          ═══════════════════════════════════════════════════════════════ -->
-    <section class="bg-navy py-24 lg:py-32">
-      <div class="container-narrow text-center">
+    <section class="bg-navy py-24 lg:py-32 relative overflow-hidden">
+      <!-- ASEAN Map Background -->
+      <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <img src="../images/asean-map.svg" class="w-[65%] h-auto opacity-[0.12]" alt="">
+      </div>
+      <div class="container-narrow text-center relative z-10">
         <div class="gold-accent mx-auto mb-6" data-animate></div>
         <h1 class="text-white mb-6" data-animate>Join the Alliance</h1>
         <p class="text-text-light max-w-2xl mx-auto text-lg leading-relaxed" data-animate>
