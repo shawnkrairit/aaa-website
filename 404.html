@@ -31,6 +31,22 @@
           },
         },
       },
+      plugins: [
+        function({ addBase }) {
+          addBase({
+            'h1, h2, h3, h4, h5, h6': {
+              fontFamily: "'Cormorant', Georgia, serif",
+              color: '#0A1628',
+              lineHeight: '1.1',
+              fontWeight: '600',
+            },
+            'h1': { fontSize: 'clamp(2.75rem, 5vw, 4.5rem)', letterSpacing: '-0.02em' },
+            'h2': { fontSize: 'clamp(2rem, 4vw, 3rem)', letterSpacing: '-0.015em' },
+            'h3': { fontSize: '1.5rem' },
+            'h4': { fontSize: '1.125rem' },
+          });
+        }
+      ],
     }
   </script>
   <link rel="stylesheet" href="css/globals.css">

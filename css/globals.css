@@ -15,16 +15,17 @@ body {
 /* Prevent FOUC while Tailwind CDN loads */
 body.loading { opacity: 0; }
 
-h1, h2, h3, h4, h5, h6 {
+/* Use "body" parent to beat Tailwind CDN preflight reset specificity */
+body h1, body h2, body h3, body h4, body h5, body h6 {
   font-family: 'Cormorant', 'Georgia', serif;
   color: #0A1628;
   line-height: 1.1;
   font-weight: 600;
 }
-h1 { font-size: clamp(2.75rem, 5vw, 4.5rem); letter-spacing: -0.02em; }
-h2 { font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -0.015em; }
-h3 { font-size: 1.5rem; }
-h4 { font-size: 1.125rem; }
+body h1 { font-size: clamp(2.75rem, 5vw, 4.5rem); letter-spacing: -0.02em; }
+body h2 { font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -0.015em; }
+body h3 { font-size: 1.5rem; }
+body h4 { font-size: 1.125rem; }
 
 a { transition: color 200ms ease-out; }
 ::selection { background-color: #0A1628; color: white; }

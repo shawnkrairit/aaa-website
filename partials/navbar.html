@@ -1,40 +1,26 @@
 <!-- ── Navbar Partial ── -->
 <header class="sticky top-0 z-50 bg-white border-b border-border transition-all duration-300">
   <div class="max-w-[82rem] mx-auto px-6">
-    <div class="flex items-center justify-between h-20">
+    <div class="flex items-center h-16 lg:h-[4.5rem]">
 
       <!-- Logo (Dark Variant) -->
-      <a href="/" class="flex-shrink-0" aria-label="AAA Home">
-        <svg viewBox="0 0 280 40" class="h-9 w-auto" xmlns="http://www.w3.org/2000/svg">
-          <!-- Shield Icon -->
-          <g transform="translate(0, 2)">
-            <!-- Shield outline -->
-            <path d="M18 2L4 8v10c0 9.33 5.97 18.06 14 20 8.03-1.94 14-10.67 14-20V8L18 2z"
-                  fill="none" stroke="#0A1628" stroke-width="1.5" stroke-linejoin="round"/>
-            <!-- Inner balance/scales motif -->
-            <circle cx="18" cy="14" r="2" fill="#A17C45"/>
-            <line x1="12" y1="20" x2="24" y2="20" stroke="#A17C45" stroke-width="1.2"/>
-            <line x1="18" y1="14" x2="18" y2="20" stroke="#A17C45" stroke-width="1.2"/>
-            <path d="M12 20c0 2.5 2.5 4 6 4s6-1.5 6-4" fill="none" stroke="#A17C45" stroke-width="1"/>
-          </g>
-          <!-- "AAA" text -->
-          <text x="42" y="22" font-family="Cormorant, Georgia, serif" font-size="22" font-weight="700"
-                fill="#0A1628" letter-spacing="0.04em">AAA</text>
-          <!-- Divider line -->
-          <line x1="82" y1="8" x2="82" y2="32" stroke="#EBEBEB" stroke-width="1"/>
-          <!-- Full name -->
-          <text x="90" y="17" font-family="Montserrat, Helvetica Neue, sans-serif" font-size="8.5"
-                font-weight="600" fill="#0A1628" letter-spacing="0.08em">ASEAN ATTORNEYS</text>
-          <text x="90" y="30" font-family="Montserrat, Helvetica Neue, sans-serif" font-size="8.5"
-                font-weight="600" fill="#0A1628" letter-spacing="0.08em">ALLIANCE</text>
+      <a href="/" class="shrink-0 cursor-pointer" aria-label="AAA Home">
+        <svg viewBox="0 0 280 40" class="h-8 lg:h-9 w-auto" fill="none" xmlns="http://www.w3.org/2000/svg"
+             role="img" aria-label="ASEAN Attorneys Alliance">
+          <!-- Stylized A mark -->
+          <path d="M2 36L18 4L34 36H28L18 12L8 36H2Z" fill="#0A1628"/>
+          <line x1="8" y1="26" x2="28" y2="26" stroke="#0A1628" stroke-width="2.5"/>
+          <!-- SEAN ATTORNEYS ALLIANCE -->
+          <text x="42" y="18" font-family="'Montserrat', 'Helvetica Neue', sans-serif" font-size="13"
+                font-weight="700" letter-spacing="0.15em" fill="#0A1628">SEAN ATTORNEYS ALLIANCE</text>
           <!-- Tagline -->
-          <text x="195" y="24" font-family="Montserrat, Helvetica Neue, sans-serif" font-size="5.5"
-                fill="rgba(10,22,40,0.5)" letter-spacing="0.15em" font-weight="500">LEGAL NETWORK</text>
+          <text x="42" y="33" font-family="'Montserrat', 'Helvetica Neue', sans-serif" font-size="8"
+                font-weight="500" letter-spacing="0.2em" fill="#64748B">A UNITY OF PROFICIENCY</text>
         </svg>
       </a>
 
-      <!-- Desktop Navigation -->
-      <nav class="hidden lg:flex items-center gap-0" aria-label="Main navigation">
+      <!-- Desktop Navigation — centered -->
+      <nav class="hidden lg:flex items-center justify-center flex-1" aria-label="Main navigation">
         <a href="/about/"
            class="px-4 py-2 text-[0.6875rem] font-semibold tracking-[0.12em] uppercase text-text-muted hover:text-navy transition-colors whitespace-nowrap">
           About
@@ -81,18 +67,19 @@
         </a>
       </nav>
 
-      <!-- Right Side: Find a Firm Button + Mobile Hamburger -->
-      <div class="flex items-center gap-4">
+      <!-- Right Side: Divider + CTA + Mobile Hamburger -->
+      <div class="flex items-center shrink-0 ml-auto lg:ml-0">
+        <div class="hidden lg:block w-px h-6 bg-border mx-3"></div>
         <!-- Find a Firm Button (desktop) -->
         <a href="/member-firms/"
-           class="hidden lg:inline-flex items-center gap-2 px-5 py-2.5 bg-navy text-white text-[0.6875rem] font-semibold tracking-[0.1em] uppercase hover:bg-gold transition-colors whitespace-nowrap">
+           class="hidden lg:inline-flex items-center gap-1.5 ml-3 px-5 py-2 bg-navy text-white font-semibold text-[0.65rem] tracking-[0.12em] uppercase hover:bg-gold transition-all duration-300 whitespace-nowrap">
           <i data-lucide="search" class="w-3.5 h-3.5"></i>
           Find a Firm
         </a>
 
         <!-- Mobile Hamburger -->
         <button id="mobile-menu-btn" type="button"
-                class="lg:hidden p-2 text-navy hover:text-gold transition-colors"
+                class="lg:hidden p-2 ml-1 text-text-muted hover:text-navy transition-colors"
                 aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
           <span class="hamburger-icon">
             <i data-lucide="menu" class="w-5 h-5"></i>
