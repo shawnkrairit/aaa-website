@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | ASEAN Attorneys Alliance</title>
+  <meta name="description" content="The ASEAN Attorneys Alliance connects you with premier independent law firms across all 11 Southeast Asian nations — delivering local expertise with regional reach.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#0A1628',
+            gold: '#A17C45',
+            'gold-light': '#C4A265',
+            border: '#EBEBEB',
+            surface: '#FAFAFA',
+            'surface-warm': '#FAF8F5',
+            text: '#0A1628',
+            'text-muted': '#64748B',
+            'text-light': '#94A3B8',
+            success: '#16A34A',
+          },
+          fontFamily: {
+            heading: ['Cormorant', 'Georgia', 'serif'],
+            body: ['Montserrat', 'Helvetica Neue', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/globals.css">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body class="loading">
+  <!-- Navbar -->
+  <div id="navbar-placeholder"></div>
+
+  <main>
+
+    <!-- ============================================================
+         SECTION 1 — Hero
+         ============================================================ -->
+    <section class="relative bg-navy min-h-[90vh] flex items-center overflow-hidden">
+
+      <!-- ASEAN Map background -->
+      <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <img src="images/asean-map.svg" class="w-[75%] h-auto opacity-[0.14]" alt="">
+      </div>
+
+      <!-- Radial gold glow overlays -->
+      <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 60% 50% at 25% 50%, rgba(161,124,69,0.08) 0%, transparent 70%)"></div>
+      <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 40% 40% at 75% 60%, rgba(161,124,69,0.05) 0%, transparent 70%)"></div>
+
+      <!-- Gold decorative corner traces -->
+      <!-- Top-left corner -->
+      <div class="absolute top-8 left-8 w-24 h-24 pointer-events-none">
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-gold/30 to-transparent"></div>
+        <div class="absolute top-0 left-0 h-full w-px bg-gradient-to-b from-gold/30 to-transparent"></div>
+      </div>
+      <!-- Top-right corner -->
+      <div class="absolute top-8 right-8 w-24 h-24 pointer-events-none">
+        <div class="absolute top-0 right-0 w-full h-px bg-gradient-to-l from-gold/30 to-transparent"></div>
+        <div class="absolute top-0 right-0 h-full w-px bg-gradient-to-b from-gold/30 to-transparent"></div>
+      </div>
+      <!-- Bottom-left corner -->
+      <div class="absolute bottom-8 left-8 w-24 h-24 pointer-events-none">
+        <div class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-gold/30 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 h-full w-px bg-gradient-to-t from-gold/30 to-transparent"></div>
+      </div>
+      <!-- Bottom-right corner -->
+      <div class="absolute bottom-8 right-8 w-24 h-24 pointer-events-none">
+        <div class="absolute bottom-0 right-0 w-full h-px bg-gradient-to-l from-gold/30 to-transparent"></div>
+        <div class="absolute bottom-0 right-0 h-full w-px bg-gradient-to-t from-gold/30 to-transparent"></div>
+      </div>
+
+      <!-- Diagonal lines -->
+      <div class="absolute inset-0 pointer-events-none overflow-hidden">
+        <div class="absolute top-0 right-[20%] w-px h-full bg-gradient-to-b from-transparent via-gold/[0.06] to-transparent" style="transform: rotate(15deg); transform-origin: top center;"></div>
+        <div class="absolute top-0 right-[35%] w-px h-full bg-gradient-to-b from-transparent via-gold/[0.04] to-transparent" style="transform: rotate(-10deg); transform-origin: top center;"></div>
+      </div>
+
+      <!-- Subtle white grid lines -->
+      <div class="absolute inset-0 pointer-events-none">
+        <!-- Horizontal lines at 25%, 50%, 75% -->
+        <div class="absolute top-1/4 left-0 w-full h-px bg-white/[0.02]"></div>
+        <div class="absolute top-1/2 left-0 w-full h-px bg-white/[0.02]"></div>
+        <div class="absolute top-3/4 left-0 w-full h-px bg-white/[0.02]"></div>
+        <!-- Vertical lines at 33%, 66% -->
+        <div class="absolute top-0 left-1/3 h-full w-px bg-white/[0.02]"></div>
+        <div class="absolute top-0 left-2/3 h-full w-px bg-white/[0.02]"></div>
+      </div>
+
+      <!-- Content -->
+      <div class="container-narrow relative z-10 py-24 lg:py-32">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+
+          <!-- Left side (7 cols) -->
+          <div class="lg:col-span-7" data-animate="fadeLeft">
+            <span class="label-text text-gold-light mb-6 block">A Unity of Proficiency</span>
+            <h1 class="text-white mb-6 leading-[1.08]">Your Trusted Legal Network Across ASEAN</h1>
+            <p class="text-white/60 text-base leading-relaxed max-w-xl mb-10 font-body">
+              The ASEAN Attorneys Alliance unites premier independent law firms across every Southeast Asian jurisdiction — delivering seamless cross-border legal counsel with the depth of local expertise and the breadth of regional coordination.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a href="member-firms/" class="inline-flex items-center gap-2.5 px-8 py-4 bg-gold text-white font-body font-semibold text-xs tracking-[0.1em] uppercase transition-all duration-300 hover:bg-gold-light hover:shadow-[0_4px_16px_rgba(161,124,69,0.35)] hover:scale-[1.02]">
+                <i data-lucide="search" class="w-4 h-4"></i>
+                Find a Member Firm
+              </a>
+              <a href="join/" class="inline-flex items-center gap-2.5 px-8 py-4 border border-white/25 text-white font-body font-semibold text-xs tracking-[0.1em] uppercase transition-all duration-300 hover:bg-white/10 hover:border-white/40 hover:scale-[1.02]">
+                Join the Alliance
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right side (5 cols) — Stats panel -->
+          <div class="lg:col-span-5" data-animate="fadeRight">
+            <div class="border border-white/10 bg-white/[0.02] backdrop-blur-sm p-8 lg:p-10">
+              <!-- Stat row 1 -->
+              <div class="pb-6 mb-6 border-b border-white/10">
+                <div class="text-4xl lg:text-5xl font-heading font-semibold text-white leading-none mb-1">11</div>
+                <div class="text-white/50 font-body text-sm tracking-wide">Countries</div>
+              </div>
+              <!-- Stat row 2 -->
+              <div class="pb-6 mb-6 border-b border-white/10">
+                <div class="text-4xl lg:text-5xl font-heading font-semibold text-white leading-none mb-1">15+</div>
+                <div class="text-white/50 font-body text-sm tracking-wide">Member Firms</div>
+              </div>
+              <!-- Stat row 3 -->
+              <div class="pb-6 mb-6 border-b border-white/10">
+                <div class="text-4xl lg:text-5xl font-heading font-semibold text-white leading-none mb-1">500+</div>
+                <div class="text-white/50 font-body text-sm tracking-wide">Attorneys</div>
+              </div>
+              <!-- Stat row 4 -->
+              <div>
+                <div class="text-4xl lg:text-5xl font-heading font-semibold text-white leading-none mb-1">8</div>
+                <div class="text-white/50 font-body text-sm tracking-wide">Practice Areas</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION 2 — TrustBar (Marquee)
+         ============================================================ -->
+    <section class="bg-surface-warm border-b border-border py-5 overflow-hidden relative">
+
+      <!-- Fade mask left -->
+      <div class="absolute left-0 top-0 bottom-0 w-24 z-10 pointer-events-none" style="background: linear-gradient(to right, #FAF8F5, transparent)"></div>
+      <!-- Fade mask right -->
+      <div class="absolute right-0 top-0 bottom-0 w-24 z-10 pointer-events-none" style="background: linear-gradient(to left, #FAF8F5, transparent)"></div>
+
+      <!-- Marquee track -->
+      <div class="animate-marquee flex items-center whitespace-nowrap">
+        <!-- First set -->
+        <a href="member-firms/brunei/" class="inline-flex items-center gap-2.5 px-6 text-sm font-body text-text-muted hover:text-navy transition-colors">
+          <img src="images/flags/BN.svg" class="flag-sm" alt="Brunei"> Brunei
+        </a>
+        <a href="member-firms/cambodia/" class="inline-flex items-center gap-2.5 px-6 text-sm font-body text-text-muted hover:text-navy transition-colors">
+          <img src="images/flags/KH.svg" class="flag-sm" alt="Cambodia"> Cambodia
+        </a>
+        <a href="member-firms/indonesia/" class="inline-flex items-center gap-2.5 px-6 text-sm font-body text-text-muted hover:text-navy transition-colors">
+          <img src="images/flags/ID.svg" class="flag-sm" alt="Indonesia"> Indonesia
+        </a>
+        <a href="member-firms/laos/" class="inline-flex items-center gap-2.5 px-6 text-sm font-body text-text-muted hover:text-navy transition-colors">
+          <img src="images/flags/LA.svg" class="flag-sm" alt="Laos"> Laos
+        </a>
+        <a href="member-firms/malaysia/" class="inline-flex items-center gap-2.5 px-6 text-sm font-body text-text-muted hover:text-navy transition-colors">
+          <img src="images/flags/MY.svg" class="flag-sm" alt="Malaysia"> Malaysia
+        </a>
+        <a href="member-firms/myanmar/" class="inline-flex items-center gap-2.5 px-6 text-sm font-body text-text-muted hover:text-navy transition-colors">
+          <img src="images/flags/MM.svg" class="flag-sm" alt="Myanmar"> Myanmar
+        </a>
+        <a href="member-firms/philippines/" class="inline-flex items-center gap-2.5 px-6 text-sm font-body text-text-muted hover:text-navy transition-colors">
+          <img src="images/flags/PH.svg" class="flag-sm" alt="Philippines"> Philippines
+        </a>
+        <a href="member-firms/singapore/" class="inline-flex items-center gap-2.5 px-6 text-sm font-body text-text-muted hover:text-navy transition-colors">
+          <img src="images/flags/SG.svg" class="flag-sm" alt="Singapore"> Singapore
+        </a>
+        <a href="member-firms/thailand/" class="inline-flex items-center gap-2.5 px-6 text-sm font-body text-text-muted hover:text-navy transition-colors">
+          <img src="images/flags/TH.svg" class="flag-sm" alt="Thailand"> Thailand
+        </a>
+        <a href="member-firms/timor-leste/" class="inline-flex items-center gap-2.5 px-6 text-sm font-body text-text-muted hover:text-navy transition-colors">
+          <img src="images/flags/TL.svg" class="flag-sm" alt="Timor-Leste"> Timor-Leste
+        </a>
+        <a href="member-firms/vietnam/" class="inline-flex items-center gap-2.5 px-6 text-sm font-body text-text-muted hover:text-navy transition-colors">
+          <img src="images/flags/VN.svg" class="flag-sm" alt="Vietnam"> Vietnam
+        </a>
+
+        <!-- Duplicated set (for seamless loop) -->
+        <a href="member-firms/brunei/" class="inline-flex items-center gap-2.5 px-6 text-sm font-body text-text-muted hover:text-navy transition-colors">
+          <img src="images/flags/BN.svg" class="flag-sm" alt="Brunei"> Brunei
+        </a>
+        <a href="member-firms/cambodia/" class="inline-flex items-center gap-2.5 px-6 text-sm font-body text-text-muted hover:text-navy transition-colors">
+          <img src="images/flags/KH.svg" class="flag-sm" alt="Cambodia"> Cambodia
+        </a>
+        <a href="member-firms/indonesia/" class="inline-flex items-center gap-2.5 px-6 text-sm font-body text-text-muted hover:text-navy transition-colors">
+          <img src="images/flags/ID.svg" class="flag-sm" alt="Indonesia"> Indonesia
+        </a>
+        <a href="member-firms/laos/" class="inline-flex items-center gap-2.5 px-6 text-sm font-body text-text-muted hover:text-navy transition-colors">
+          <img src="images/flags/LA.svg" class="flag-sm" alt="Laos"> Laos
+        </a>
+        <a href="member-firms/malaysia/" class="inline-flex items-center gap-2.5 px-6 text-sm font-body text-text-muted hover:text-navy transition-colors">
+          <img src="images/flags/MY.svg" class="flag-sm" alt="Malaysia"> Malaysia
+        </a>
+        <a href="member-firms/myanmar/" class="inline-flex items-center gap-2.5 px-6 text-sm font-body text-text-muted hover:text-navy transition-colors">
+          <img src="images/flags/MM.svg" class="flag-sm" alt="Myanmar"> Myanmar
+        </a>
+        <a href="member-firms/philippines/" class="inline-flex items-center gap-2.5 px-6 text-sm font-body text-text-muted hover:text-navy transition-colors">
+          <img src="images/flags/PH.svg" class="flag-sm" alt="Philippines"> Philippines
+        </a>
+        <a href="member-firms/singapore/" class="inline-flex items-center gap-2.5 px-6 text-sm font-body text-text-muted hover:text-navy transition-colors">
+          <img src="images/flags/SG.svg" class="flag-sm" alt="Singapore"> Singapore
+        </a>
+        <a href="member-firms/thailand/" class="inline-flex items-center gap-2.5 px-6 text-sm font-body text-text-muted hover:text-navy transition-colors">
+          <img src="images/flags/TH.svg" class="flag-sm" alt="Thailand"> Thailand
+        </a>
+        <a href="member-firms/timor-leste/" class="inline-flex items-center gap-2.5 px-6 text-sm font-body text-text-muted hover:text-navy transition-colors">
+          <img src="images/flags/TL.svg" class="flag-sm" alt="Timor-Leste"> Timor-Leste
+        </a>
+        <a href="member-firms/vietnam/" class="inline-flex items-center gap-2.5 px-6 text-sm font-body text-text-muted hover:text-navy transition-colors">
+          <img src="images/flags/VN.svg" class="flag-sm" alt="Vietnam"> Vietnam
+        </a>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION 3 — About Preview
+         ============================================================ -->
+    <section class="bg-white section-padding relative overflow-hidden">
+
+      <!-- Gold corner traces (top-right) -->
+      <div class="absolute top-8 right-8 w-32 h-32 pointer-events-none">
+        <div class="absolute top-0 right-0 w-full h-px bg-gradient-to-l from-gold/[0.08] to-transparent"></div>
+        <div class="absolute top-0 right-0 h-full w-px bg-gradient-to-b from-gold/[0.08] to-transparent"></div>
+      </div>
+      <!-- Gold corner traces (bottom-left) -->
+      <div class="absolute bottom-8 left-8 w-32 h-32 pointer-events-none">
+        <div class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-gold/[0.08] to-transparent"></div>
+        <div class="absolute bottom-0 left-0 h-full w-px bg-gradient-to-t from-gold/[0.08] to-transparent"></div>
+      </div>
+
+      <div class="container-narrow">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+
+          <!-- Left (5 cols) -->
+          <div class="lg:col-span-5" data-animate="fadeLeft">
+            <div class="gold-accent mb-6"></div>
+            <h2 class="mb-6">About the Alliance</h2>
+            <p class="text-text-muted text-[0.9375rem] leading-relaxed mb-8">
+              The ASEAN Attorneys Alliance is a network of leading independent law firms spanning all eleven Southeast Asian nations. Founded on the principle of collaborative excellence, we provide clients with seamless access to top-tier local legal expertise across the region's most dynamic markets.
+            </p>
+            <a href="about/" class="inline-flex items-center gap-2 text-gold font-body font-semibold text-xs tracking-[0.1em] uppercase link-underline hover:text-gold-light transition-colors">
+              Learn More About Us
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+
+          <!-- Right (7 cols) -->
+          <div class="lg:col-span-7" data-animate="fadeRight">
+            <div class="border-l-2 border-gold bg-surface-warm p-8 lg:p-10">
+              <p class="text-navy font-heading text-2xl lg:text-[1.75rem] italic leading-snug mb-6">
+                "True regional legal service is not about size alone — it is about the trusted relationships between independent firms who share a commitment to excellence in every jurisdiction they serve."
+              </p>
+              <span class="label-text text-gold">Founding Principle</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION 4 — Why AAA (3D Flip Cards)
+         ============================================================ -->
+    <section class="bg-navy section-padding relative overflow-hidden">
+
+      <!-- Gold radial glow -->
+      <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 50% 60% at 50% 40%, rgba(161,124,69,0.06) 0%, transparent 70%)"></div>
+
+      <!-- Diagonal traces -->
+      <div class="absolute inset-0 pointer-events-none overflow-hidden">
+        <div class="absolute top-0 left-[15%] w-px h-full bg-gradient-to-b from-transparent via-gold/[0.05] to-transparent" style="transform: rotate(12deg); transform-origin: top center;"></div>
+        <div class="absolute top-0 right-[25%] w-px h-full bg-gradient-to-b from-transparent via-gold/[0.04] to-transparent" style="transform: rotate(-8deg); transform-origin: top center;"></div>
+      </div>
+
+      <div class="container-narrow relative z-10">
+
+        <!-- Header -->
+        <div class="text-center mb-16" data-animate>
+          <div class="gold-accent mx-auto mb-6"></div>
+          <h2 class="text-white mb-4">Why Choose the Alliance</h2>
+          <p class="text-white/50 font-body text-[0.9375rem] max-w-2xl mx-auto leading-relaxed">
+            A carefully curated network delivering unmatched legal capabilities across every ASEAN jurisdiction.
+          </p>
+        </div>
+
+        <!-- 4 Flip Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" data-stagger>
+
+          <!-- Card 1: Regional Coverage -->
+          <div class="h-72 cursor-pointer group" style="perspective:1000px">
+            <div class="relative w-full h-full transition-transform duration-500 group-hover:[transform:rotateY(180deg)]" style="transform-style:preserve-3d">
+              <!-- Front -->
+              <div class="absolute inset-0 flex flex-col items-center justify-center p-6 bg-white/[0.05] border border-white/10" style="backface-visibility:hidden">
+                <div class="w-14 h-14 flex items-center justify-center border border-gold/30 rounded-full mb-5">
+                  <i data-lucide="globe" class="w-6 h-6 text-gold"></i>
+                </div>
+                <h4 class="text-white font-heading text-lg text-center">Regional Coverage</h4>
+              </div>
+              <!-- Back -->
+              <div class="absolute inset-0 flex flex-col items-center justify-center p-6 bg-gold" style="backface-visibility:hidden; transform:rotateY(180deg)">
+                <div class="w-14 h-14 flex items-center justify-center border border-white/30 rounded-full mb-5">
+                  <i data-lucide="globe" class="w-6 h-6 text-white"></i>
+                </div>
+                <h4 class="text-white font-heading text-lg text-center mb-3">Regional Coverage</h4>
+                <p class="text-white/80 text-xs font-body text-center leading-relaxed">Member firms in all 11 ASEAN nations providing comprehensive geographic coverage across Southeast Asia.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Local Expertise -->
+          <div class="h-72 cursor-pointer group" style="perspective:1000px">
+            <div class="relative w-full h-full transition-transform duration-500 group-hover:[transform:rotateY(180deg)]" style="transform-style:preserve-3d">
+              <!-- Front -->
+              <div class="absolute inset-0 flex flex-col items-center justify-center p-6 bg-white/[0.05] border border-white/10" style="backface-visibility:hidden">
+                <div class="w-14 h-14 flex items-center justify-center border border-gold/30 rounded-full mb-5">
+                  <i data-lucide="book-open" class="w-6 h-6 text-gold"></i>
+                </div>
+                <h4 class="text-white font-heading text-lg text-center">Local Expertise</h4>
+              </div>
+              <!-- Back -->
+              <div class="absolute inset-0 flex flex-col items-center justify-center p-6 bg-gold" style="backface-visibility:hidden; transform:rotateY(180deg)">
+                <div class="w-14 h-14 flex items-center justify-center border border-white/30 rounded-full mb-5">
+                  <i data-lucide="book-open" class="w-6 h-6 text-white"></i>
+                </div>
+                <h4 class="text-white font-heading text-lg text-center mb-3">Local Expertise</h4>
+                <p class="text-white/80 text-xs font-body text-center leading-relaxed">Each member is a leading independent practice with deep knowledge of local laws, courts, and business customs.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Competitive Fees -->
+          <div class="h-72 cursor-pointer group" style="perspective:1000px">
+            <div class="relative w-full h-full transition-transform duration-500 group-hover:[transform:rotateY(180deg)]" style="transform-style:preserve-3d">
+              <!-- Front -->
+              <div class="absolute inset-0 flex flex-col items-center justify-center p-6 bg-white/[0.05] border border-white/10" style="backface-visibility:hidden">
+                <div class="w-14 h-14 flex items-center justify-center border border-gold/30 rounded-full mb-5">
+                  <i data-lucide="dollar-sign" class="w-6 h-6 text-gold"></i>
+                </div>
+                <h4 class="text-white font-heading text-lg text-center">Competitive Fees</h4>
+              </div>
+              <!-- Back -->
+              <div class="absolute inset-0 flex flex-col items-center justify-center p-6 bg-gold" style="backface-visibility:hidden; transform:rotateY(180deg)">
+                <div class="w-14 h-14 flex items-center justify-center border border-white/30 rounded-full mb-5">
+                  <i data-lucide="dollar-sign" class="w-6 h-6 text-white"></i>
+                </div>
+                <h4 class="text-white font-heading text-lg text-center mb-3">Competitive Fees</h4>
+                <p class="text-white/80 text-xs font-body text-center leading-relaxed">Direct access to top local firms without the overhead of international firm pricing structures.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Invitation-Only Quality -->
+          <div class="h-72 cursor-pointer group" style="perspective:1000px">
+            <div class="relative w-full h-full transition-transform duration-500 group-hover:[transform:rotateY(180deg)]" style="transform-style:preserve-3d">
+              <!-- Front -->
+              <div class="absolute inset-0 flex flex-col items-center justify-center p-6 bg-white/[0.05] border border-white/10" style="backface-visibility:hidden">
+                <div class="w-14 h-14 flex items-center justify-center border border-gold/30 rounded-full mb-5">
+                  <i data-lucide="shield-check" class="w-6 h-6 text-gold"></i>
+                </div>
+                <h4 class="text-white font-heading text-lg text-center">Invitation-Only Quality</h4>
+              </div>
+              <!-- Back -->
+              <div class="absolute inset-0 flex flex-col items-center justify-center p-6 bg-gold" style="backface-visibility:hidden; transform:rotateY(180deg)">
+                <div class="w-14 h-14 flex items-center justify-center border border-white/30 rounded-full mb-5">
+                  <i data-lucide="shield-check" class="w-6 h-6 text-white"></i>
+                </div>
+                <h4 class="text-white font-heading text-lg text-center mb-3">Invitation-Only Quality</h4>
+                <p class="text-white/80 text-xs font-body text-center leading-relaxed">Rigorous due diligence screening ensures every member meets the highest standards of professional excellence.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION 5 — ASEAN Map / Country Grid
+         ============================================================ -->
+    <section class="bg-white section-padding relative overflow-hidden">
+
+      <!-- ASEAN map background -->
+      <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <img src="images/asean-map.svg" class="w-[65%] h-auto opacity-[0.18]" alt="">
+      </div>
+
+      <!-- Gold corner traces (top-left) -->
+      <div class="absolute top-8 left-8 w-28 h-28 pointer-events-none">
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-gold/[0.08] to-transparent"></div>
+        <div class="absolute top-0 left-0 h-full w-px bg-gradient-to-b from-gold/[0.08] to-transparent"></div>
+      </div>
+      <!-- Gold corner traces (bottom-right) -->
+      <div class="absolute bottom-8 right-8 w-28 h-28 pointer-events-none">
+        <div class="absolute bottom-0 right-0 w-full h-px bg-gradient-to-l from-gold/[0.08] to-transparent"></div>
+        <div class="absolute bottom-0 right-0 h-full w-px bg-gradient-to-b from-gold/[0.08] to-transparent"></div>
+      </div>
+
+      <div class="container-narrow relative z-10">
+
+        <!-- Header -->
+        <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-12" data-animate>
+          <div>
+            <div class="gold-accent mb-6"></div>
+            <h2 class="mb-3">Member Firms</h2>
+            <p class="text-text-muted font-body text-[0.9375rem] max-w-xl leading-relaxed">
+              Our alliance spans all eleven ASEAN nations, with trusted member firms in every jurisdiction.
+            </p>
+          </div>
+          <a href="member-firms/" class="inline-flex items-center gap-2 text-gold font-body font-semibold text-xs tracking-[0.1em] uppercase link-underline hover:text-gold-light transition-colors mt-6 sm:mt-0 shrink-0">
+            View All Jurisdictions
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <!-- Country grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4" data-stagger>
+
+          <!-- Brunei -->
+          <a href="member-firms/brunei/" class="card flex flex-col items-center text-center py-6 px-4">
+            <img src="images/flags/BN.svg" class="flag-lg mb-4" alt="Brunei">
+            <h4 class="font-heading text-navy text-base mb-2">Brunei</h4>
+            <span class="inline-flex items-center gap-1.5 text-text-muted text-xs font-body">
+              <i data-lucide="map-pin" class="w-3 h-3"></i> 1 Firm
+            </span>
+          </a>
+
+          <!-- Cambodia -->
+          <a href="member-firms/cambodia/" class="card flex flex-col items-center text-center py-6 px-4">
+            <img src="images/flags/KH.svg" class="flag-lg mb-4" alt="Cambodia">
+            <h4 class="font-heading text-navy text-base mb-2">Cambodia</h4>
+            <span class="inline-flex items-center gap-1.5 text-text-muted text-xs font-body">
+              <i data-lucide="map-pin" class="w-3 h-3"></i> 1 Firm
+            </span>
+          </a>
+
+          <!-- Indonesia -->
+          <a href="member-firms/indonesia/" class="card flex flex-col items-center text-center py-6 px-4">
+            <img src="images/flags/ID.svg" class="flag-lg mb-4" alt="Indonesia">
+            <h4 class="font-heading text-navy text-base mb-2">Indonesia</h4>
+            <span class="inline-flex items-center gap-1.5 text-text-muted text-xs font-body">
+              <i data-lucide="map-pin" class="w-3 h-3"></i> 2 Firms
+            </span>
+          </a>
+
+          <!-- Laos -->
+          <a href="member-firms/laos/" class="card flex flex-col items-center text-center py-6 px-4">
+            <img src="images/flags/LA.svg" class="flag-lg mb-4" alt="Laos">
+            <h4 class="font-heading text-navy text-base mb-2">Laos</h4>
+            <span class="inline-flex items-center gap-1.5 text-text-muted text-xs font-body">
+              <i data-lucide="map-pin" class="w-3 h-3"></i> 1 Firm
+            </span>
+          </a>
+
+          <!-- Malaysia -->
+          <a href="member-firms/malaysia/" class="card flex flex-col items-center text-center py-6 px-4">
+            <img src="images/flags/MY.svg" class="flag-lg mb-4" alt="Malaysia">
+            <h4 class="font-heading text-navy text-base mb-2">Malaysia</h4>
+            <span class="inline-flex items-center gap-1.5 text-text-muted text-xs font-body">
+              <i data-lucide="map-pin" class="w-3 h-3"></i> 2 Firms
+            </span>
+          </a>
+
+          <!-- Myanmar -->
+          <a href="member-firms/myanmar/" class="card flex flex-col items-center text-center py-6 px-4">
+            <img src="images/flags/MM.svg" class="flag-lg mb-4" alt="Myanmar">
+            <h4 class="font-heading text-navy text-base mb-2">Myanmar</h4>
+            <span class="inline-flex items-center gap-1.5 text-text-muted text-xs font-body">
+              <i data-lucide="map-pin" class="w-3 h-3"></i> 1 Firm
+            </span>
+          </a>
+
+          <!-- Philippines -->
+          <a href="member-firms/philippines/" class="card flex flex-col items-center text-center py-6 px-4">
+            <img src="images/flags/PH.svg" class="flag-lg mb-4" alt="Philippines">
+            <h4 class="font-heading text-navy text-base mb-2">Philippines</h4>
+            <span class="inline-flex items-center gap-1.5 text-text-muted text-xs font-body">
+              <i data-lucide="map-pin" class="w-3 h-3"></i> 2 Firms
+            </span>
+          </a>
+
+          <!-- Singapore -->
+          <a href="member-firms/singapore/" class="card flex flex-col items-center text-center py-6 px-4">
+            <img src="images/flags/SG.svg" class="flag-lg mb-4" alt="Singapore">
+            <h4 class="font-heading text-navy text-base mb-2">Singapore</h4>
+            <span class="inline-flex items-center gap-1.5 text-text-muted text-xs font-body">
+              <i data-lucide="map-pin" class="w-3 h-3"></i> 2 Firms
+            </span>
+          </a>
+
+          <!-- Thailand -->
+          <a href="member-firms/thailand/" class="card flex flex-col items-center text-center py-6 px-4">
+            <img src="images/flags/TH.svg" class="flag-lg mb-4" alt="Thailand">
+            <h4 class="font-heading text-navy text-base mb-2">Thailand</h4>
+            <span class="inline-flex items-center gap-1.5 text-text-muted text-xs font-body">
+              <i data-lucide="map-pin" class="w-3 h-3"></i> 1 Firm
+            </span>
+          </a>
+
+          <!-- Timor-Leste -->
+          <a href="member-firms/timor-leste/" class="card flex flex-col items-center text-center py-6 px-4">
+            <img src="images/flags/TL.svg" class="flag-lg mb-4" alt="Timor-Leste">
+            <h4 class="font-heading text-navy text-base mb-2">Timor-Leste</h4>
+            <span class="inline-flex items-center gap-1.5 text-text-muted text-xs font-body">
+              <i data-lucide="map-pin" class="w-3 h-3"></i> 1 Firm
+            </span>
+          </a>
+
+          <!-- Vietnam -->
+          <a href="member-firms/vietnam/" class="card flex flex-col items-center text-center py-6 px-4">
+            <img src="images/flags/VN.svg" class="flag-lg mb-4" alt="Vietnam">
+            <h4 class="font-heading text-navy text-base mb-2">Vietnam</h4>
+            <span class="inline-flex items-center gap-1.5 text-text-muted text-xs font-body">
+              <i data-lucide="map-pin" class="w-3 h-3"></i> 2 Firms
+            </span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION 6 — Practice Areas Preview
+         ============================================================ -->
+    <section class="bg-surface section-padding">
+      <div class="container-narrow">
+
+        <!-- Header -->
+        <div class="text-center mb-14" data-animate>
+          <div class="gold-accent mx-auto mb-6"></div>
+          <h2 class="mb-4">Practice Areas</h2>
+          <p class="text-text-muted font-body text-[0.9375rem] max-w-2xl mx-auto leading-relaxed">
+            Our member firms provide specialist counsel across the full spectrum of commercial and regulatory practice areas.
+          </p>
+        </div>
+
+        <!-- 2x4 Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5" data-stagger>
+
+          <!-- Corporate & Commercial -->
+          <a href="practice-areas/" class="group block bg-white border border-border overflow-hidden transition-all duration-300 hover:border-gold hover:shadow-[0_10px_25px_rgba(10,22,40,0.08)] hover:-translate-y-0.5">
+            <div class="h-0 group-hover:h-0.5 bg-gold transition-all duration-300"></div>
+            <div class="p-6">
+              <div class="w-11 h-11 flex items-center justify-center bg-surface rounded mb-4">
+                <i data-lucide="building-2" class="w-5 h-5 text-navy"></i>
+              </div>
+              <h4 class="font-heading text-navy text-[1.0625rem]">Corporate &amp; Commercial</h4>
+            </div>
+          </a>
+
+          <!-- Banking & Finance -->
+          <a href="practice-areas/" class="group block bg-white border border-border overflow-hidden transition-all duration-300 hover:border-gold hover:shadow-[0_10px_25px_rgba(10,22,40,0.08)] hover:-translate-y-0.5">
+            <div class="h-0 group-hover:h-0.5 bg-gold transition-all duration-300"></div>
+            <div class="p-6">
+              <div class="w-11 h-11 flex items-center justify-center bg-surface rounded mb-4">
+                <i data-lucide="landmark" class="w-5 h-5 text-navy"></i>
+              </div>
+              <h4 class="font-heading text-navy text-[1.0625rem]">Banking &amp; Finance</h4>
+            </div>
+          </a>
+
+          <!-- Intellectual Property -->
+          <a href="practice-areas/" class="group block bg-white border border-border overflow-hidden transition-all duration-300 hover:border-gold hover:shadow-[0_10px_25px_rgba(10,22,40,0.08)] hover:-translate-y-0.5">
+            <div class="h-0 group-hover:h-0.5 bg-gold transition-all duration-300"></div>
+            <div class="p-6">
+              <div class="w-11 h-11 flex items-center justify-center bg-surface rounded mb-4">
+                <i data-lucide="shield" class="w-5 h-5 text-navy"></i>
+              </div>
+              <h4 class="font-heading text-navy text-[1.0625rem]">Intellectual Property</h4>
+            </div>
+          </a>
+
+          <!-- Litigation & Dispute Resolution -->
+          <a href="practice-areas/" class="group block bg-white border border-border overflow-hidden transition-all duration-300 hover:border-gold hover:shadow-[0_10px_25px_rgba(10,22,40,0.08)] hover:-translate-y-0.5">
+            <div class="h-0 group-hover:h-0.5 bg-gold transition-all duration-300"></div>
+            <div class="p-6">
+              <div class="w-11 h-11 flex items-center justify-center bg-surface rounded mb-4">
+                <i data-lucide="scale" class="w-5 h-5 text-navy"></i>
+              </div>
+              <h4 class="font-heading text-navy text-[1.0625rem]">Litigation &amp; Dispute Resolution</h4>
+            </div>
+          </a>
+
+          <!-- Mergers & Acquisitions -->
+          <a href="practice-areas/" class="group block bg-white border border-border overflow-hidden transition-all duration-300 hover:border-gold hover:shadow-[0_10px_25px_rgba(10,22,40,0.08)] hover:-translate-y-0.5">
+            <div class="h-0 group-hover:h-0.5 bg-gold transition-all duration-300"></div>
+            <div class="p-6">
+              <div class="w-11 h-11 flex items-center justify-center bg-surface rounded mb-4">
+                <i data-lucide="git-merge" class="w-5 h-5 text-navy"></i>
+              </div>
+              <h4 class="font-heading text-navy text-[1.0625rem]">Mergers &amp; Acquisitions</h4>
+            </div>
+          </a>
+
+          <!-- Employment & Labour -->
+          <a href="practice-areas/" class="group block bg-white border border-border overflow-hidden transition-all duration-300 hover:border-gold hover:shadow-[0_10px_25px_rgba(10,22,40,0.08)] hover:-translate-y-0.5">
+            <div class="h-0 group-hover:h-0.5 bg-gold transition-all duration-300"></div>
+            <div class="p-6">
+              <div class="w-11 h-11 flex items-center justify-center bg-surface rounded mb-4">
+                <i data-lucide="users" class="w-5 h-5 text-navy"></i>
+              </div>
+              <h4 class="font-heading text-navy text-[1.0625rem]">Employment &amp; Labour</h4>
+            </div>
+          </a>
+
+          <!-- Real Estate & Construction -->
+          <a href="practice-areas/" class="group block bg-white border border-border overflow-hidden transition-all duration-300 hover:border-gold hover:shadow-[0_10px_25px_rgba(10,22,40,0.08)] hover:-translate-y-0.5">
+            <div class="h-0 group-hover:h-0.5 bg-gold transition-all duration-300"></div>
+            <div class="p-6">
+              <div class="w-11 h-11 flex items-center justify-center bg-surface rounded mb-4">
+                <i data-lucide="home" class="w-5 h-5 text-navy"></i>
+              </div>
+              <h4 class="font-heading text-navy text-[1.0625rem]">Real Estate &amp; Construction</h4>
+            </div>
+          </a>
+
+          <!-- Tax -->
+          <a href="practice-areas/" class="group block bg-white border border-border overflow-hidden transition-all duration-300 hover:border-gold hover:shadow-[0_10px_25px_rgba(10,22,40,0.08)] hover:-translate-y-0.5">
+            <div class="h-0 group-hover:h-0.5 bg-gold transition-all duration-300"></div>
+            <div class="p-6">
+              <div class="w-11 h-11 flex items-center justify-center bg-surface rounded mb-4">
+                <i data-lucide="calculator" class="w-5 h-5 text-navy"></i>
+              </div>
+              <h4 class="font-heading text-navy text-[1.0625rem]">Tax</h4>
+            </div>
+          </a>
+
+        </div>
+
+        <!-- View All link -->
+        <div class="text-center mt-12" data-animate>
+          <a href="practice-areas/" class="inline-flex items-center gap-2 text-gold font-body font-semibold text-xs tracking-[0.1em] uppercase link-underline hover:text-gold-light transition-colors">
+            View All Practice Areas
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION 7 — Latest News
+         ============================================================ -->
+    <section class="bg-white section-padding">
+      <div class="container-narrow">
+
+        <!-- Header -->
+        <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-12" data-animate>
+          <div>
+            <div class="gold-accent mb-6"></div>
+            <h2 class="mb-3">Latest News &amp; Insights</h2>
+            <p class="text-text-muted font-body text-[0.9375rem] max-w-xl leading-relaxed">
+              Stay informed with the latest legal developments, alliance updates, and market insights from across ASEAN.
+            </p>
+          </div>
+          <a href="news/" class="btn-secondary mt-6 sm:mt-0 shrink-0">
+            View All News
+            <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+          </a>
+        </div>
+
+        <!-- 3-col News Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6" data-stagger>
+
+          <!-- Article 1 -->
+          <a href="news/asean-economic-outlook-2026/" class="group block bg-white border border-border overflow-hidden transition-all duration-300 hover:border-gold hover:shadow-[0_10px_25px_rgba(10,22,40,0.08)] hover:-translate-y-0.5">
+            <div class="h-0.5 bg-gold scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+            <div class="p-6">
+              <span class="inline-block px-3 py-1 bg-surface text-text-muted text-[0.6875rem] font-body font-semibold tracking-[0.08em] uppercase mb-4">ASEAN Updates</span>
+              <h4 class="font-heading text-navy text-lg mb-3 leading-snug group-hover:text-gold transition-colors">ASEAN Economic Outlook: Strong Growth Continues Into 2026</h4>
+              <p class="text-text-muted text-sm font-body leading-relaxed mb-4">An analysis of key economic indicators across Southeast Asia and their implications for cross-border business and investment in the region.</p>
+              <div class="flex items-center justify-between">
+                <span class="text-text-light text-xs font-body">March 1, 2026</span>
+                <span class="inline-flex items-center gap-1 text-gold text-xs font-body font-semibold tracking-wide uppercase group-hover:gap-2 transition-all">
+                  Read More <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Article 2 -->
+          <a href="news/thailand-new-foreign-business-regulations/" class="group block bg-white border border-border overflow-hidden transition-all duration-300 hover:border-gold hover:shadow-[0_10px_25px_rgba(10,22,40,0.08)] hover:-translate-y-0.5">
+            <div class="h-0.5 bg-gold scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-4">
+                <span class="inline-block px-3 py-1 bg-surface text-text-muted text-[0.6875rem] font-body font-semibold tracking-[0.08em] uppercase">Legal Updates</span>
+                <span class="inline-flex items-center gap-1 text-text-light text-[0.6875rem] font-body">
+                  <img src="images/flags/TH.svg" class="w-4 h-3 object-cover rounded-sm" alt="Thailand"> Thailand
+                </span>
+              </div>
+              <h4 class="font-heading text-navy text-lg mb-3 leading-snug group-hover:text-gold transition-colors">Thailand Updates Foreign Business Act Regulations</h4>
+              <p class="text-text-muted text-sm font-body leading-relaxed mb-4">Key changes to foreign ownership rules and business licensing requirements under the revised Foreign Business Act provisions.</p>
+              <div class="flex items-center justify-between">
+                <span class="text-text-light text-xs font-body">February 15, 2026</span>
+                <span class="inline-flex items-center gap-1 text-gold text-xs font-body font-semibold tracking-wide uppercase group-hover:gap-2 transition-all">
+                  Read More <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Article 3 -->
+          <a href="news/aaa-annual-conference-2025-recap/" class="group block bg-white border border-border overflow-hidden transition-all duration-300 hover:border-gold hover:shadow-[0_10px_25px_rgba(10,22,40,0.08)] hover:-translate-y-0.5">
+            <div class="h-0.5 bg-gold scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+            <div class="p-6">
+              <span class="inline-block px-3 py-1 bg-surface text-text-muted text-[0.6875rem] font-body font-semibold tracking-[0.08em] uppercase mb-4">Alliance News</span>
+              <h4 class="font-heading text-navy text-lg mb-3 leading-snug group-hover:text-gold transition-colors">AAA Annual Conference 2025: Strengthening Regional Legal Cooperation</h4>
+              <p class="text-text-muted text-sm font-body leading-relaxed mb-4">Highlights and key takeaways from the Alliance's annual gathering of member firm leaders and distinguished legal professionals.</p>
+              <div class="flex items-center justify-between">
+                <span class="text-text-light text-xs font-body">January 20, 2026</span>
+                <span class="inline-flex items-center gap-1 text-gold text-xs font-body font-semibold tracking-wide uppercase group-hover:gap-2 transition-all">
+                  Read More <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION 8 — CTA Section
+         ============================================================ -->
+    <section class="bg-navy section-padding relative overflow-hidden">
+
+      <!-- ASEAN map background (left-aligned) -->
+      <div class="absolute inset-0 pointer-events-none" style="transform: translateX(-15%)">
+        <img src="images/asean-map.svg" class="w-[55%] h-auto opacity-[0.12] absolute top-1/2 left-0 -translate-y-1/2" alt="">
+      </div>
+
+      <!-- Gold radial glows -->
+      <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 50% 50% at 50% 50%, rgba(161,124,69,0.07) 0%, transparent 70%)"></div>
+      <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 30% 40% at 80% 30%, rgba(161,124,69,0.04) 0%, transparent 70%)"></div>
+
+      <!-- Corner traces -->
+      <div class="absolute top-8 left-8 w-24 h-24 pointer-events-none">
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-gold/30 to-transparent"></div>
+        <div class="absolute top-0 left-0 h-full w-px bg-gradient-to-b from-gold/30 to-transparent"></div>
+      </div>
+      <div class="absolute top-8 right-8 w-24 h-24 pointer-events-none">
+        <div class="absolute top-0 right-0 w-full h-px bg-gradient-to-l from-gold/30 to-transparent"></div>
+        <div class="absolute top-0 right-0 h-full w-px bg-gradient-to-b from-gold/30 to-transparent"></div>
+      </div>
+      <div class="absolute bottom-8 left-8 w-24 h-24 pointer-events-none">
+        <div class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-gold/30 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 h-full w-px bg-gradient-to-t from-gold/30 to-transparent"></div>
+      </div>
+      <div class="absolute bottom-8 right-8 w-24 h-24 pointer-events-none">
+        <div class="absolute bottom-0 right-0 w-full h-px bg-gradient-to-l from-gold/30 to-transparent"></div>
+        <div class="absolute bottom-0 right-0 h-full w-px bg-gradient-to-t from-gold/30 to-transparent"></div>
+      </div>
+
+      <!-- Horizontal whiskers -->
+      <div class="absolute top-1/2 left-8 w-16 h-px bg-gradient-to-r from-gold/20 to-transparent pointer-events-none"></div>
+      <div class="absolute top-1/2 right-8 w-16 h-px bg-gradient-to-l from-gold/20 to-transparent pointer-events-none"></div>
+
+      <!-- White grid lines -->
+      <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute top-1/4 left-0 w-full h-px bg-white/[0.02]"></div>
+        <div class="absolute top-1/2 left-0 w-full h-px bg-white/[0.02]"></div>
+        <div class="absolute top-3/4 left-0 w-full h-px bg-white/[0.02]"></div>
+        <div class="absolute top-0 left-1/3 h-full w-px bg-white/[0.02]"></div>
+        <div class="absolute top-0 left-2/3 h-full w-px bg-white/[0.02]"></div>
+      </div>
+
+      <!-- Content -->
+      <div class="container-narrow relative z-10 text-center">
+        <div data-animate>
+          <div class="gold-accent mx-auto mb-6"></div>
+          <h2 class="text-white mb-5">Join the ASEAN Attorneys Alliance</h2>
+          <p class="text-white/50 font-body text-[0.9375rem] max-w-2xl mx-auto leading-relaxed mb-10">
+            We welcome leading independent law firms that share our commitment to professional excellence and cross-border cooperation across Southeast Asia.
+          </p>
+          <a href="join/" class="inline-flex items-center gap-2.5 px-10 py-4 bg-gold text-white font-body font-semibold text-xs tracking-[0.1em] uppercase transition-all duration-300 hover:bg-gold-light hover:shadow-[0_4px_16px_rgba(161,124,69,0.35)] hover:scale-[1.02]">
+            Apply for Membership
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/includes.js"></script>
+  <script src="js/scroll-animate.js"></script>
+</body>
+</html>

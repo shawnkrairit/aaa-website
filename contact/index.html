@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | ASEAN Attorneys Alliance</title>
+  <meta name="description" content="Get in touch with the ASEAN Attorneys Alliance for legal expertise across Southeast Asia.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#0A1628',
+            gold: '#A17C45',
+            'gold-light': '#C4A265',
+            border: '#EBEBEB',
+            surface: '#FAFAFA',
+            'surface-warm': '#FAF8F5',
+            text: '#0A1628',
+            'text-muted': '#64748B',
+            'text-light': '#94A3B8',
+            success: '#16A34A',
+          },
+          fontFamily: {
+            heading: ['Cormorant', 'Georgia', 'serif'],
+            body: ['Montserrat', 'Helvetica Neue', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="../css/globals.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body class="loading">
+  <div id="navbar-placeholder"></div>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         1. PAGE HEADER
+         ═══════════════════════════════════════════════════════════════ -->
+    <section class="bg-navy py-24 lg:py-32">
+      <div class="container-narrow text-center">
+        <div class="gold-accent mx-auto mb-6" data-animate></div>
+        <h1 class="text-white mb-6" data-animate>Contact Us</h1>
+        <p class="text-text-light max-w-2xl mx-auto text-lg leading-relaxed" data-animate>
+          Get in touch with the ASEAN Attorneys Alliance. We're here to help connect you with the right legal expertise across Southeast Asia.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         2. CONTACT SECTION
+         ═══════════════════════════════════════════════════════════════ -->
+    <section class="bg-white section-padding">
+      <div class="container-narrow">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
+
+          <!-- Contact Form -->
+          <div class="lg:col-span-3" data-animate>
+            <h2 class="mb-8">Send Us a Message</h2>
+
+            <form action="#" method="POST" class="space-y-6">
+              <!-- Row 1: Name & Email -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <label for="full-name" class="block text-xs font-semibold tracking-wider uppercase text-text mb-2">Full Name</label>
+                  <input type="text" id="full-name" name="full_name" required placeholder="Your full name" class="input-field">
+                </div>
+                <div>
+                  <label for="email" class="block text-xs font-semibold tracking-wider uppercase text-text mb-2">Email Address</label>
+                  <input type="email" id="email" name="email" required placeholder="you@example.com" class="input-field">
+                </div>
+              </div>
+
+              <!-- Row 2: Company & Country -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <label for="company" class="block text-xs font-semibold tracking-wider uppercase text-text mb-2">Company / Firm Name</label>
+                  <input type="text" id="company" name="company" placeholder="Your company or firm" class="input-field">
+                </div>
+                <div>
+                  <label for="country" class="block text-xs font-semibold tracking-wider uppercase text-text mb-2">Country</label>
+                  <select id="country" name="country" class="input-field">
+                    <option value="">Select a country</option>
+                    <option value="Brunei">Brunei</option>
+                    <option value="Cambodia">Cambodia</option>
+                    <option value="Indonesia">Indonesia</option>
+                    <option value="Laos">Laos</option>
+                    <option value="Malaysia">Malaysia</option>
+                    <option value="Myanmar">Myanmar</option>
+                    <option value="Philippines">Philippines</option>
+                    <option value="Singapore">Singapore</option>
+                    <option value="Thailand">Thailand</option>
+                    <option value="Timor-Leste">Timor-Leste</option>
+                    <option value="Vietnam">Vietnam</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Row 3: Subject -->
+              <div>
+                <label for="subject" class="block text-xs font-semibold tracking-wider uppercase text-text mb-2">Subject</label>
+                <select id="subject" name="subject" class="input-field">
+                  <option value="">Select a subject</option>
+                  <option value="General Inquiry">General Inquiry</option>
+                  <option value="Membership Inquiry">Membership Inquiry</option>
+                  <option value="Legal Referral Request">Legal Referral Request</option>
+                  <option value="Media Inquiry">Media Inquiry</option>
+                </select>
+              </div>
+
+              <!-- Row 4: Message -->
+              <div>
+                <label for="message" class="block text-xs font-semibold tracking-wider uppercase text-text mb-2">Your Message</label>
+                <textarea id="message" name="message" rows="6" required placeholder="How can we help you?" class="input-field"></textarea>
+              </div>
+
+              <!-- Submit -->
+              <div>
+                <button type="submit" class="btn-primary gap-2">
+                  <i data-lucide="send" class="w-4 h-4"></i>
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Sidebar -->
+          <div class="lg:col-span-2" data-animate>
+            <div class="card !p-8 sticky top-28 border-t-2 border-t-gold">
+              <h3 class="mb-6">Alliance Secretariat</h3>
+
+              <!-- Address -->
+              <div class="flex gap-4 mb-6">
+                <div class="w-10 h-10 border border-border flex items-center justify-center shrink-0">
+                  <i data-lucide="map-pin" class="w-5 h-5 text-gold"></i>
+                </div>
+                <div>
+                  <p class="text-xs font-semibold tracking-wider uppercase text-text mb-1">Address</p>
+                  <p class="text-text-muted text-sm leading-relaxed">Charn Issara Tower 1, 2/Fl, 942/69 Rama IV Road, Bangkok 10500, Thailand</p>
+                </div>
+              </div>
+
+              <!-- Phone -->
+              <div class="flex gap-4 mb-6">
+                <div class="w-10 h-10 border border-border flex items-center justify-center shrink-0">
+                  <i data-lucide="phone" class="w-5 h-5 text-gold"></i>
+                </div>
+                <div>
+                  <p class="text-xs font-semibold tracking-wider uppercase text-text mb-1">Phone</p>
+                  <a href="tel:+6622330055" class="text-text-muted text-sm hover:text-gold transition-colors">+66 (0) 2233 0055</a>
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="flex gap-4 mb-8">
+                <div class="w-10 h-10 border border-border flex items-center justify-center shrink-0">
+                  <i data-lucide="mail" class="w-5 h-5 text-gold"></i>
+                </div>
+                <div>
+                  <p class="text-xs font-semibold tracking-wider uppercase text-text mb-1">Email</p>
+                  <a href="mailto:info@aseanattorneysalliance.com" class="text-text-muted text-sm hover:text-gold transition-colors">info@aseanattorneysalliance.com</a>
+                </div>
+              </div>
+
+              <!-- Google Maps -->
+              <div class="w-full aspect-[4/3] bg-surface">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.0!2d100.523!3d13.723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDQzJzIzLjAiTiAxMDDCsDMxJzIzLjAiRQ!5e0!3m2!1sen!2sth!4v1"
+                  width="100%"
+                  height="100%"
+                  style="border:0;"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="ASEAN Attorneys Alliance Office Location"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="../js/main.js"></script>
+  <script src="../js/includes.js"></script>
+  <script src="../js/scroll-animate.js"></script>
+</body>
+</html>

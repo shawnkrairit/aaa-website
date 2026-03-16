@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News &amp; Insights | ASEAN Attorneys Alliance</title>
+  <meta name="description" content="Legal developments, regulatory updates, and alliance news from across the ASEAN region.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#0A1628',
+            gold: '#A17C45',
+            'gold-light': '#C4A265',
+            border: '#EBEBEB',
+            surface: '#FAFAFA',
+            'surface-warm': '#FAF8F5',
+            text: '#0A1628',
+            'text-muted': '#64748B',
+            'text-light': '#94A3B8',
+            success: '#16A34A',
+          },
+          fontFamily: {
+            heading: ['Cormorant', 'Georgia', 'serif'],
+            body: ['Montserrat', 'Helvetica Neue', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="../css/globals.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body class="loading">
+  <div id="navbar-placeholder"></div>
+  <main>
+
+    <!-- Page Header -->
+    <section class="bg-navy py-24 lg:py-32">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <div class="w-12 h-px bg-gold mx-auto mb-6"></div>
+        <h1 class="font-heading text-4xl lg:text-5xl font-bold text-white mb-4">News &amp; Insights</h1>
+        <p class="text-gold-light text-lg max-w-2xl mx-auto">Legal developments, regulatory updates, and alliance news from across the ASEAN region.</p>
+      </div>
+    </section>
+
+    <!-- Category Filters -->
+    <section class="bg-white border-b border-border py-4">
+      <div class="max-w-7xl mx-auto px-6 flex justify-center flex-wrap gap-2">
+        <button data-filter="all" class="filter-btn px-5 py-2 text-xs font-semibold tracking-widest uppercase transition-colors cursor-pointer bg-navy text-white">All</button>
+        <button data-filter="asean-updates" class="filter-btn px-5 py-2 text-xs font-semibold tracking-widest uppercase transition-colors cursor-pointer bg-surface text-text-muted">ASEAN Updates</button>
+        <button data-filter="legal-updates" class="filter-btn px-5 py-2 text-xs font-semibold tracking-widest uppercase transition-colors cursor-pointer bg-surface text-text-muted">Legal Updates</button>
+        <button data-filter="alliance-news" class="filter-btn px-5 py-2 text-xs font-semibold tracking-widest uppercase transition-colors cursor-pointer bg-surface text-text-muted">Alliance News</button>
+      </div>
+    </section>
+
+    <!-- Articles Grid -->
+    <section class="bg-surface section-padding">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <!-- Article 1: ASEAN Economic Outlook -->
+          <a href="asean-economic-outlook-2026/" data-category="asean-updates" class="card group cursor-pointer !p-0 overflow-hidden bg-white block">
+            <div class="h-px bg-gold"></div>
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="label-text flex items-center gap-1">
+                  <i data-lucide="tag" class="w-3 h-3"></i>
+                  ASEAN Updates
+                </span>
+              </div>
+              <h2 class="text-lg font-heading text-navy font-semibold mb-3 leading-snug group-hover:text-gold transition-colors">ASEAN Economic Outlook: Strong Growth Continues Into 2026</h2>
+              <p class="text-text-muted text-sm leading-relaxed mb-4">The ASEAN region continues to demonstrate resilient economic growth, with GDP expansion expected to reach 5.2% across member states.</p>
+              <div class="flex items-center justify-between">
+                <span class="flex items-center gap-1.5 text-text-light text-xs">
+                  <i data-lucide="calendar" class="w-3 h-3"></i>
+                  March 1, 2026
+                </span>
+                <span class="text-gold text-xs font-semibold tracking-wider uppercase group-hover:text-gold-light transition-colors flex items-center gap-1">
+                  Read More
+                  <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                </span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Article 2: Thailand Foreign Business Regulations -->
+          <a href="thailand-new-foreign-business-regulations/" data-category="legal-updates" class="card group cursor-pointer !p-0 overflow-hidden bg-white block">
+            <div class="h-px bg-gold"></div>
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="label-text flex items-center gap-1">
+                  <i data-lucide="tag" class="w-3 h-3"></i>
+                  Legal Updates
+                </span>
+                <span class="px-2.5 py-1 bg-gold/10 text-gold text-xs font-semibold tracking-wider uppercase">Thailand</span>
+              </div>
+              <h2 class="text-lg font-heading text-navy font-semibold mb-3 leading-snug group-hover:text-gold transition-colors">Thailand Updates Foreign Business Act Regulations</h2>
+              <p class="text-text-muted text-sm leading-relaxed mb-4">New amendments to Thailand's Foreign Business Act introduce streamlined procedures for foreign companies seeking to operate in the Kingdom.</p>
+              <div class="flex items-center justify-between">
+                <span class="flex items-center gap-1.5 text-text-light text-xs">
+                  <i data-lucide="calendar" class="w-3 h-3"></i>
+                  February 15, 2026
+                </span>
+                <span class="text-gold text-xs font-semibold tracking-wider uppercase group-hover:text-gold-light transition-colors flex items-center gap-1">
+                  Read More
+                  <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                </span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Article 3: AAA Annual Conference 2025 Recap -->
+          <a href="aaa-annual-conference-2025-recap/" data-category="alliance-news" class="card group cursor-pointer !p-0 overflow-hidden bg-white block">
+            <div class="h-px bg-gold"></div>
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="label-text flex items-center gap-1">
+                  <i data-lucide="tag" class="w-3 h-3"></i>
+                  Alliance News
+                </span>
+              </div>
+              <h2 class="text-lg font-heading text-navy font-semibold mb-3 leading-snug group-hover:text-gold transition-colors">AAA Annual Conference 2025: Strengthening Regional Legal Cooperation</h2>
+              <p class="text-text-muted text-sm leading-relaxed mb-4">Member firms from all 11 ASEAN nations gathered in Singapore for the annual alliance conference, focusing on cross-border legal harmonisation.</p>
+              <div class="flex items-center justify-between">
+                <span class="flex items-center gap-1.5 text-text-light text-xs">
+                  <i data-lucide="calendar" class="w-3 h-3"></i>
+                  January 20, 2026
+                </span>
+                <span class="text-gold text-xs font-semibold tracking-wider uppercase group-hover:text-gold-light transition-colors flex items-center gap-1">
+                  Read More
+                  <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                </span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Article 4: Vietnam Investment Law Amendments -->
+          <a href="vietnam-new-investment-law-amendments/" data-category="legal-updates" class="card group cursor-pointer !p-0 overflow-hidden bg-white block">
+            <div class="h-px bg-gold"></div>
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="label-text flex items-center gap-1">
+                  <i data-lucide="tag" class="w-3 h-3"></i>
+                  Legal Updates
+                </span>
+                <span class="px-2.5 py-1 bg-gold/10 text-gold text-xs font-semibold tracking-wider uppercase">Vietnam</span>
+              </div>
+              <h2 class="text-lg font-heading text-navy font-semibold mb-3 leading-snug group-hover:text-gold transition-colors">Vietnam Amends Investment Law to Attract More Foreign Capital</h2>
+              <p class="text-text-muted text-sm leading-relaxed mb-4">Vietnam's latest investment law amendments remove several barriers to foreign investment and introduce new incentive frameworks.</p>
+              <div class="flex items-center justify-between">
+                <span class="flex items-center gap-1.5 text-text-light text-xs">
+                  <i data-lucide="calendar" class="w-3 h-3"></i>
+                  January 10, 2026
+                </span>
+                <span class="text-gold text-xs font-semibold tracking-wider uppercase group-hover:text-gold-light transition-colors flex items-center gap-1">
+                  Read More
+                  <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                </span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Article 5: RCEP Impact on ASEAN Trade -->
+          <a href="rcep-impact-on-asean-trade/" data-category="asean-updates" class="card group cursor-pointer !p-0 overflow-hidden bg-white block">
+            <div class="h-px bg-gold"></div>
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="label-text flex items-center gap-1">
+                  <i data-lucide="tag" class="w-3 h-3"></i>
+                  ASEAN Updates
+                </span>
+              </div>
+              <h2 class="text-lg font-heading text-navy font-semibold mb-3 leading-snug group-hover:text-gold transition-colors">RCEP Drives Significant Increase in Intra-ASEAN Trade</h2>
+              <p class="text-text-muted text-sm leading-relaxed mb-4">Three years after full implementation, the RCEP agreement has demonstrably boosted trade between ASEAN member states and partner economies.</p>
+              <div class="flex items-center justify-between">
+                <span class="flex items-center gap-1.5 text-text-light text-xs">
+                  <i data-lucide="calendar" class="w-3 h-3"></i>
+                  December 5, 2025
+                </span>
+                <span class="text-gold text-xs font-semibold tracking-wider uppercase group-hover:text-gold-light transition-colors flex items-center gap-1">
+                  Read More
+                  <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                </span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Article 6: Indonesia Omnibus Law Update -->
+          <a href="indonesia-omnibus-law-update/" data-category="legal-updates" class="card group cursor-pointer !p-0 overflow-hidden bg-white block">
+            <div class="h-px bg-gold"></div>
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="label-text flex items-center gap-1">
+                  <i data-lucide="tag" class="w-3 h-3"></i>
+                  Legal Updates
+                </span>
+                <span class="px-2.5 py-1 bg-gold/10 text-gold text-xs font-semibold tracking-wider uppercase">Indonesia</span>
+              </div>
+              <h2 class="text-lg font-heading text-navy font-semibold mb-3 leading-snug group-hover:text-gold transition-colors">Indonesia's Omnibus Law: Two Years of Implementation</h2>
+              <p class="text-text-muted text-sm leading-relaxed mb-4">An assessment of the Job Creation Law's impact on business formation, labour regulations, and investment climate in Indonesia.</p>
+              <div class="flex items-center justify-between">
+                <span class="flex items-center gap-1.5 text-text-light text-xs">
+                  <i data-lucide="calendar" class="w-3 h-3"></i>
+                  November 18, 2025
+                </span>
+                <span class="text-gold text-xs font-semibold tracking-wider uppercase group-hover:text-gold-light transition-colors flex items-center gap-1">
+                  Read More
+                  <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                </span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <div id="footer-placeholder"></div>
+  <script src="../js/main.js"></script>
+  <script src="../js/includes.js"></script>
+  <script src="../js/scroll-animate.js"></script>
+  <script>
+    // Category filter functionality
+    document.addEventListener('DOMContentLoaded', function () {
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const articles = document.querySelectorAll('[data-category]');
+
+      filterButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          const filter = this.getAttribute('data-filter');
+
+          // Update active button styles
+          filterButtons.forEach(function (b) {
+            b.classList.remove('bg-navy', 'text-white');
+            b.classList.add('bg-surface', 'text-text-muted');
+          });
+          this.classList.remove('bg-surface', 'text-text-muted');
+          this.classList.add('bg-navy', 'text-white');
+
+          // Filter articles
+          articles.forEach(function (article) {
+            if (filter === 'all' || article.getAttribute('data-category') === filter) {
+              article.style.display = '';
+            } else {
+              article.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

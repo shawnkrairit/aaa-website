@@ -1,0 +1,152 @@
+<!-- ── Navbar Partial ── -->
+<header class="sticky top-0 z-50 bg-white border-b border-border transition-all duration-300">
+  <div class="max-w-[82rem] mx-auto px-6">
+    <div class="flex items-center justify-between h-20">
+
+      <!-- Logo (Dark Variant) -->
+      <a href="/" class="flex-shrink-0" aria-label="AAA Home">
+        <svg viewBox="0 0 280 40" class="h-9 w-auto" xmlns="http://www.w3.org/2000/svg">
+          <!-- Shield Icon -->
+          <g transform="translate(0, 2)">
+            <!-- Shield outline -->
+            <path d="M18 2L4 8v10c0 9.33 5.97 18.06 14 20 8.03-1.94 14-10.67 14-20V8L18 2z"
+                  fill="none" stroke="#0A1628" stroke-width="1.5" stroke-linejoin="round"/>
+            <!-- Inner balance/scales motif -->
+            <circle cx="18" cy="14" r="2" fill="#A17C45"/>
+            <line x1="12" y1="20" x2="24" y2="20" stroke="#A17C45" stroke-width="1.2"/>
+            <line x1="18" y1="14" x2="18" y2="20" stroke="#A17C45" stroke-width="1.2"/>
+            <path d="M12 20c0 2.5 2.5 4 6 4s6-1.5 6-4" fill="none" stroke="#A17C45" stroke-width="1"/>
+          </g>
+          <!-- "AAA" text -->
+          <text x="42" y="22" font-family="Cormorant, Georgia, serif" font-size="22" font-weight="700"
+                fill="#0A1628" letter-spacing="0.04em">AAA</text>
+          <!-- Divider line -->
+          <line x1="82" y1="8" x2="82" y2="32" stroke="#EBEBEB" stroke-width="1"/>
+          <!-- Full name -->
+          <text x="90" y="17" font-family="Montserrat, Helvetica Neue, sans-serif" font-size="8.5"
+                font-weight="600" fill="#0A1628" letter-spacing="0.08em">ASEAN ATTORNEYS</text>
+          <text x="90" y="30" font-family="Montserrat, Helvetica Neue, sans-serif" font-size="8.5"
+                font-weight="600" fill="#0A1628" letter-spacing="0.08em">ALLIANCE</text>
+          <!-- Tagline -->
+          <text x="195" y="24" font-family="Montserrat, Helvetica Neue, sans-serif" font-size="5.5"
+                fill="rgba(10,22,40,0.5)" letter-spacing="0.15em" font-weight="500">LEGAL NETWORK</text>
+        </svg>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex items-center gap-0" aria-label="Main navigation">
+        <a href="/about/"
+           class="px-4 py-2 text-[0.6875rem] font-semibold tracking-[0.12em] uppercase text-text-muted hover:text-navy transition-colors whitespace-nowrap">
+          About
+        </a>
+
+        <!-- Our Network (Dropdown) -->
+        <div class="nav-dropdown relative">
+          <button type="button"
+                  class="px-4 py-2 text-[0.6875rem] font-semibold tracking-[0.12em] uppercase text-text-muted hover:text-navy transition-colors whitespace-nowrap inline-flex items-center gap-1.5"
+                  aria-expanded="false" aria-haspopup="true">
+            Our Network
+            <i data-lucide="chevron-down" class="w-3 h-3"></i>
+          </button>
+          <div class="dropdown-panel absolute top-full left-0 mt-1 w-56 bg-white border border-border shadow-lg z-50">
+            <a href="/member-firms/"
+               class="block px-5 py-3 text-[0.75rem] font-medium text-text-muted hover:text-navy hover:bg-surface transition-colors">
+              Member Firms
+            </a>
+            <a href="/business-guides/"
+               class="block px-5 py-3 text-[0.75rem] font-medium text-text-muted hover:text-navy hover:bg-surface transition-colors">
+              Business Guides
+            </a>
+          </div>
+        </div>
+
+        <a href="/practice-areas/"
+           class="px-4 py-2 text-[0.6875rem] font-semibold tracking-[0.12em] uppercase text-text-muted hover:text-navy transition-colors whitespace-nowrap">
+          Practice Areas
+        </a>
+
+        <a href="/news/"
+           class="px-4 py-2 text-[0.6875rem] font-semibold tracking-[0.12em] uppercase text-text-muted hover:text-navy transition-colors whitespace-nowrap">
+          News &amp; Insights
+        </a>
+
+        <a href="/join/"
+           class="px-4 py-2 text-[0.6875rem] font-semibold tracking-[0.12em] uppercase text-text-muted hover:text-navy transition-colors whitespace-nowrap">
+          Join AAA
+        </a>
+
+        <a href="/contact/"
+           class="px-4 py-2 text-[0.6875rem] font-semibold tracking-[0.12em] uppercase text-text-muted hover:text-navy transition-colors whitespace-nowrap">
+          Contact
+        </a>
+      </nav>
+
+      <!-- Right Side: Find a Firm Button + Mobile Hamburger -->
+      <div class="flex items-center gap-4">
+        <!-- Find a Firm Button (desktop) -->
+        <a href="/member-firms/"
+           class="hidden lg:inline-flex items-center gap-2 px-5 py-2.5 bg-navy text-white text-[0.6875rem] font-semibold tracking-[0.1em] uppercase hover:bg-gold transition-colors whitespace-nowrap">
+          <i data-lucide="search" class="w-3.5 h-3.5"></i>
+          Find a Firm
+        </a>
+
+        <!-- Mobile Hamburger -->
+        <button id="mobile-menu-btn" type="button"
+                class="lg:hidden p-2 text-navy hover:text-gold transition-colors"
+                aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="hamburger-icon">
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </span>
+          <span class="close-icon hidden">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu lg:hidden bg-white border-t border-border">
+    <div class="max-w-[82rem] mx-auto px-6 py-4">
+      <nav class="flex flex-col gap-1" aria-label="Mobile navigation">
+        <a href="/about/"
+           class="px-4 py-3 text-[0.75rem] font-semibold tracking-[0.1em] uppercase text-text-muted hover:text-navy transition-colors">
+          About
+        </a>
+        <a href="/member-firms/"
+           class="px-4 py-3 text-[0.75rem] font-semibold tracking-[0.1em] uppercase text-text-muted hover:text-navy transition-colors">
+          Member Firms
+        </a>
+        <a href="/business-guides/"
+           class="px-4 py-3 text-[0.75rem] font-semibold tracking-[0.1em] uppercase text-text-muted hover:text-navy transition-colors">
+          Business Guides
+        </a>
+        <a href="/practice-areas/"
+           class="px-4 py-3 text-[0.75rem] font-semibold tracking-[0.1em] uppercase text-text-muted hover:text-navy transition-colors">
+          Practice Areas
+        </a>
+        <a href="/news/"
+           class="px-4 py-3 text-[0.75rem] font-semibold tracking-[0.1em] uppercase text-text-muted hover:text-navy transition-colors">
+          News &amp; Insights
+        </a>
+        <a href="/join/"
+           class="px-4 py-3 text-[0.75rem] font-semibold tracking-[0.1em] uppercase text-text-muted hover:text-navy transition-colors">
+          Join AAA
+        </a>
+        <a href="/contact/"
+           class="px-4 py-3 text-[0.75rem] font-semibold tracking-[0.1em] uppercase text-text-muted hover:text-navy transition-colors">
+          Contact
+        </a>
+
+        <!-- Mobile Find a Firm -->
+        <div class="pt-3 mt-2 border-t border-border">
+          <a href="/member-firms/"
+             class="inline-flex items-center gap-2 px-5 py-3 bg-navy text-white text-[0.6875rem] font-semibold tracking-[0.1em] uppercase hover:bg-gold transition-colors w-full justify-center">
+            <i data-lucide="search" class="w-3.5 h-3.5"></i>
+            Find a Firm
+          </a>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
