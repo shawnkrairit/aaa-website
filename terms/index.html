@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Use | ASEAN Attorneys Alliance</title>
+  <meta name="description" content="Terms of use for the ASEAN Attorneys Alliance website. Please read these terms carefully before using this website.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#0A1628',
+            gold: '#A17C45',
+            'gold-light': '#C4A265',
+            border: '#EBEBEB',
+            surface: '#FAFAFA',
+            'surface-warm': '#FAF8F5',
+            text: '#0A1628',
+            'text-muted': '#64748B',
+            'text-light': '#94A3B8',
+            success: '#16A34A',
+          },
+          fontFamily: {
+            heading: ['Cormorant', 'Georgia', 'serif'],
+            body: ['Montserrat', 'Helvetica Neue', 'sans-serif'],
+          },
+        },
+      },
+      plugins: [
+        function({ addBase }) {
+          addBase({
+            'h1, h2, h3, h4, h5, h6': {
+              fontFamily: "'Cormorant', Georgia, serif",
+              color: '#0A1628',
+              lineHeight: '1.1',
+              fontWeight: '600',
+            },
+            'h1': { fontSize: 'clamp(2.75rem, 5vw, 4.5rem)', letterSpacing: '-0.02em' },
+            'h2': { fontSize: 'clamp(2rem, 4vw, 3rem)', letterSpacing: '-0.015em' },
+            'h3': { fontSize: '1.5rem' },
+            'h4': { fontSize: '1.125rem' },
+          });
+        }
+      ],
+    }
+  </script>
+  <link rel="stylesheet" href="../css/globals.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body class="loading">
+  <div id="navbar-placeholder"></div>
+
+  <main>
+    <!-- ══════════════════════════════════════════════════════════════
+         SECTION 1 — Page Header
+    ══════════════════════════════════════════════════════════════ -->
+    <section class="bg-navy py-24 lg:py-32 relative overflow-hidden">
+      <div class="container-narrow text-center relative z-10" data-animate="fadeUp">
+        <div class="gold-accent mx-auto mb-6"></div>
+        <h1 class="text-white mb-6">Terms of Use</h1>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════
+         SECTION 2 — Content
+    ══════════════════════════════════════════════════════════════ -->
+    <section class="bg-white section-padding">
+      <div class="container-narrow">
+        <div class="max-w-3xl mx-auto">
+          <p class="text-text-light text-sm mb-10">Last updated: March 2026</p>
+
+          <h3 class="text-xl font-heading font-semibold text-navy mt-0 mb-4">Acceptance of Terms</h3>
+          <p class="mb-6 text-text-muted leading-relaxed">By accessing and using the ASEAN Attorneys Alliance website, you agree to be bound by these terms. If you do not agree, please do not use this website.</p>
+
+          <h3 class="text-xl font-heading font-semibold text-navy mt-8 mb-4">Informational Purposes</h3>
+          <p class="mb-6 text-text-muted leading-relaxed">The content on this website is provided for general informational purposes only. It does not constitute legal advice and should not be relied upon as such. No solicitor-client relationship is created by your use of this website or by any communication through it.</p>
+
+          <h3 class="text-xl font-heading font-semibold text-navy mt-8 mb-4">No Legal Advice</h3>
+          <p class="mb-6 text-text-muted leading-relaxed">The Alliance and its member firms do not provide legal advice through this website. For legal advice specific to your situation, please contact a qualified lawyer in the relevant jurisdiction.</p>
+
+          <h3 class="text-xl font-heading font-semibold text-navy mt-8 mb-4">Intellectual Property</h3>
+          <p class="mb-6 text-text-muted leading-relaxed">All content on this website, including text, graphics, logos, and design, is the property of the ASEAN Attorneys Alliance or its licensors and is protected by applicable intellectual property laws.</p>
+
+          <h3 class="text-xl font-heading font-semibold text-navy mt-8 mb-4">Member Firm Independence</h3>
+          <p class="mb-6 text-text-muted leading-relaxed">Each member firm of the ASEAN Attorneys Alliance is an independent legal practice. The Alliance does not practise law and is not responsible for the legal services provided by any member firm. Each firm is solely responsible for its own work.</p>
+
+          <h3 class="text-xl font-heading font-semibold text-navy mt-8 mb-4">Limitation of Liability</h3>
+          <p class="mb-6 text-text-muted leading-relaxed">The ASEAN Attorneys Alliance shall not be liable for any loss or damage arising from the use of this website or reliance on any information contained herein.</p>
+
+          <h3 class="text-xl font-heading font-semibold text-navy mt-8 mb-4">Governing Law</h3>
+          <p class="mb-6 text-text-muted leading-relaxed">These terms are governed by the laws of the Kingdom of Thailand. Any disputes shall be subject to the jurisdiction of the courts of Thailand.</p>
+
+          <h3 class="text-xl font-heading font-semibold text-navy mt-8 mb-4">Contact</h3>
+          <p class="mb-6 text-text-muted leading-relaxed">For questions about these terms, please contact us at info@aseanattorneysalliance.com</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="../js/main.js"></script>
+  <script src="../js/includes.js"></script>
+  <script src="../js/scroll-animate.js"></script>
+</body>
+</html>

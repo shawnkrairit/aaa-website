@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events | ASEAN Attorneys Alliance</title>
+  <meta name="description" content="Conferences, seminars, and networking events hosted by the ASEAN Attorneys Alliance.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#0A1628',
+            gold: '#A17C45',
+            'gold-light': '#C4A265',
+            border: '#EBEBEB',
+            surface: '#FAFAFA',
+            'surface-warm': '#FAF8F5',
+            text: '#0A1628',
+            'text-muted': '#64748B',
+            'text-light': '#94A3B8',
+            success: '#16A34A',
+          },
+          fontFamily: {
+            heading: ['Cormorant', 'Georgia', 'serif'],
+            body: ['Montserrat', 'Helvetica Neue', 'sans-serif'],
+          },
+        },
+      },
+      plugins: [
+        function({ addBase }) {
+          addBase({
+            'h1, h2, h3, h4, h5, h6': {
+              fontFamily: "'Cormorant', Georgia, serif",
+              color: '#0A1628',
+              lineHeight: '1.1',
+              fontWeight: '600',
+            },
+            'h1': { fontSize: 'clamp(2.75rem, 5vw, 4.5rem)', letterSpacing: '-0.02em' },
+            'h2': { fontSize: 'clamp(2rem, 4vw, 3rem)', letterSpacing: '-0.015em' },
+            'h3': { fontSize: '1.5rem' },
+            'h4': { fontSize: '1.125rem' },
+          });
+        }
+      ],
+    }
+  </script>
+  <link rel="stylesheet" href="../css/globals.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body class="loading">
+  <div id="navbar-placeholder"></div>
+
+  <main>
+    <!-- ══════════════════════════════════════════════════════════════
+         SECTION 1 — Page Header
+    ══════════════════════════════════════════════════════════════ -->
+    <section class="bg-navy py-24 lg:py-32 relative overflow-hidden">
+      <!-- ASEAN Map Background -->
+      <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <img src="../images/asean-map.svg" class="w-[65%] h-auto opacity-[0.12] brightness-0 invert" alt="">
+      </div>
+      <div class="container-narrow text-center relative z-10" data-animate="fadeUp">
+        <div class="gold-accent mx-auto mb-6"></div>
+        <h1 class="text-white mb-6">Events</h1>
+        <p class="text-text-light max-w-3xl mx-auto text-base lg:text-lg leading-relaxed">
+          Conferences, seminars, and networking events connecting legal professionals across Southeast Asia.
+        </p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════
+         SECTION 2 — Upcoming Events
+    ══════════════════════════════════════════════════════════════ -->
+    <section class="bg-white section-padding">
+      <div class="container-narrow">
+        <div class="text-center mb-16" data-animate="fadeUp">
+          <div class="gold-accent mx-auto mb-6"></div>
+          <h2>Upcoming Events</h2>
+        </div>
+
+        <div class="space-y-8" data-stagger>
+
+          <!-- Event 1: AAA Founding Members Conference 2026 -->
+          <div class="card !p-0 overflow-hidden">
+            <div class="flex flex-col sm:flex-row">
+              <!-- Date Block -->
+              <div class="bg-navy flex flex-col items-center justify-center px-8 py-6 sm:py-8 sm:min-w-[140px] flex-shrink-0">
+                <span class="text-white font-heading text-4xl font-bold leading-none">14</span>
+                <span class="text-text-light font-body text-xs tracking-wider uppercase mt-1">Jun 2026</span>
+              </div>
+              <!-- Event Details -->
+              <div class="p-6 sm:p-8 flex-1">
+                <div class="flex flex-wrap items-center gap-3 mb-3">
+                  <span class="px-2.5 py-1 bg-gold/10 text-gold text-[0.65rem] font-semibold tracking-wider uppercase">Conference</span>
+                </div>
+                <h3 class="text-xl mb-3">AAA Founding Members Conference 2026</h3>
+                <div class="flex flex-wrap items-center gap-4 text-text-muted text-sm mb-4">
+                  <span class="flex items-center gap-1.5">
+                    <i data-lucide="calendar" class="w-4 h-4 text-gold"></i>
+                    June 14&ndash;15, 2026
+                  </span>
+                  <span class="flex items-center gap-1.5">
+                    <i data-lucide="map-pin" class="w-4 h-4 text-gold"></i>
+                    Bangkok, Thailand
+                  </span>
+                </div>
+                <p class="text-text-muted text-sm leading-relaxed">
+                  The inaugural conference bringing together founding member firms from across ASEAN. Topics include alliance governance, practice working group formation, and cross-border referral protocols.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 2: ASEAN Digital Economy Legal Workshop -->
+          <div class="card !p-0 overflow-hidden">
+            <div class="flex flex-col sm:flex-row">
+              <!-- Date Block -->
+              <div class="bg-navy flex flex-col items-center justify-center px-8 py-6 sm:py-8 sm:min-w-[140px] flex-shrink-0">
+                <span class="text-white font-heading text-4xl font-bold leading-none">22</span>
+                <span class="text-text-light font-body text-xs tracking-wider uppercase mt-1">Aug 2026</span>
+              </div>
+              <!-- Event Details -->
+              <div class="p-6 sm:p-8 flex-1">
+                <div class="flex flex-wrap items-center gap-3 mb-3">
+                  <span class="px-2.5 py-1 bg-gold/10 text-gold text-[0.65rem] font-semibold tracking-wider uppercase">Workshop</span>
+                </div>
+                <h3 class="text-xl mb-3">ASEAN Digital Economy Legal Workshop</h3>
+                <div class="flex flex-wrap items-center gap-4 text-text-muted text-sm mb-4">
+                  <span class="flex items-center gap-1.5">
+                    <i data-lucide="calendar" class="w-4 h-4 text-gold"></i>
+                    August 22, 2026
+                  </span>
+                  <span class="flex items-center gap-1.5">
+                    <i data-lucide="map-pin" class="w-4 h-4 text-gold"></i>
+                    Singapore
+                  </span>
+                </div>
+                <p class="text-text-muted text-sm leading-relaxed">
+                  A half-day workshop examining data protection, e-commerce regulation, and fintech compliance across ASEAN jurisdictions. Open to member firms and invited guests.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 3: Cross-Border M&A in ASEAN -->
+          <div class="card !p-0 overflow-hidden">
+            <div class="flex flex-col sm:flex-row">
+              <!-- Date Block -->
+              <div class="bg-navy flex flex-col items-center justify-center px-8 py-6 sm:py-8 sm:min-w-[140px] flex-shrink-0">
+                <span class="text-white font-heading text-4xl font-bold leading-none">10</span>
+                <span class="text-text-light font-body text-xs tracking-wider uppercase mt-1">Oct 2026</span>
+              </div>
+              <!-- Event Details -->
+              <div class="p-6 sm:p-8 flex-1">
+                <div class="flex flex-wrap items-center gap-3 mb-3">
+                  <span class="px-2.5 py-1 bg-gold/10 text-gold text-[0.65rem] font-semibold tracking-wider uppercase">Webinar</span>
+                </div>
+                <h3 class="text-xl mb-3">Cross-Border M&amp;A in ASEAN: Practical Perspectives</h3>
+                <div class="flex flex-wrap items-center gap-4 text-text-muted text-sm mb-4">
+                  <span class="flex items-center gap-1.5">
+                    <i data-lucide="calendar" class="w-4 h-4 text-gold"></i>
+                    October 10, 2026
+                  </span>
+                  <span class="flex items-center gap-1.5">
+                    <i data-lucide="video" class="w-4 h-4 text-gold"></i>
+                    Virtual (Zoom)
+                  </span>
+                </div>
+                <p class="text-text-muted text-sm leading-relaxed">
+                  A webinar series featuring member firm partners discussing due diligence challenges, regulatory approvals, and post-merger integration across ASEAN markets.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════
+         SECTION 3 — Annual Programme
+    ══════════════════════════════════════════════════════════════ -->
+    <section class="bg-surface-warm section-padding">
+      <div class="container-narrow">
+        <div class="text-center mb-16" data-animate="fadeUp">
+          <div class="gold-accent mx-auto mb-6"></div>
+          <h2>Annual Programme</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" data-stagger>
+
+          <!-- Q1 -->
+          <div class="card text-center">
+            <div class="w-14 h-14 bg-navy flex items-center justify-center mx-auto mb-5">
+              <span class="text-white font-body font-bold text-sm">Q1</span>
+            </div>
+            <h3 class="text-lg mb-3">Regional Practice Group Meetings</h3>
+            <div class="flex items-center justify-center gap-1.5 text-text-muted text-sm">
+              <i data-lucide="monitor" class="w-4 h-4 text-gold"></i>
+              <span>Virtual</span>
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="card text-center">
+            <div class="w-14 h-14 bg-navy flex items-center justify-center mx-auto mb-5">
+              <span class="text-white font-body font-bold text-sm">Q2</span>
+            </div>
+            <h3 class="text-lg mb-3">Annual Founding Members Conference</h3>
+            <div class="flex items-center justify-center gap-1.5 text-text-muted text-sm">
+              <i data-lucide="users" class="w-4 h-4 text-gold"></i>
+              <span>In Person</span>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="card text-center">
+            <div class="w-14 h-14 bg-navy flex items-center justify-center mx-auto mb-5">
+              <span class="text-white font-body font-bold text-sm">Q3</span>
+            </div>
+            <h3 class="text-lg mb-3">ASEAN Legal Workshop Series</h3>
+            <div class="flex items-center justify-center gap-1.5 text-text-muted text-sm">
+              <i data-lucide="book-open" class="w-4 h-4 text-gold"></i>
+              <span>Hybrid</span>
+            </div>
+          </div>
+
+          <!-- Q4 -->
+          <div class="card text-center">
+            <div class="w-14 h-14 bg-navy flex items-center justify-center mx-auto mb-5">
+              <span class="text-white font-body font-bold text-sm">Q4</span>
+            </div>
+            <h3 class="text-lg mb-3">Year-End Review and Planning Session</h3>
+            <div class="flex items-center justify-center gap-1.5 text-text-muted text-sm">
+              <i data-lucide="clipboard-list" class="w-4 h-4 text-gold"></i>
+              <span>Virtual</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════
+         SECTION 4 — CTA
+    ══════════════════════════════════════════════════════════════ -->
+    <section class="bg-white section-padding">
+      <div class="container-narrow text-center" data-animate="fadeUp">
+        <h2 class="text-navy mb-4">Stay Updated</h2>
+        <p class="text-text-muted max-w-2xl mx-auto text-base lg:text-lg leading-relaxed mb-8">
+          Member firms receive priority invitations to all Alliance events. Contact us to learn more about upcoming programmes.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="/contact/" class="btn-primary">
+            <i data-lucide="mail" class="w-4 h-4"></i>
+            Contact Us
+          </a>
+          <a href="/join/" class="btn-outline">
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            Join the Alliance
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="../js/main.js"></script>
+  <script src="../js/includes.js"></script>
+  <script src="../js/scroll-animate.js"></script>
+</body>
+</html>
