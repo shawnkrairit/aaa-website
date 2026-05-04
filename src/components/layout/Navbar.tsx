@@ -3,12 +3,11 @@
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/routing";
 import { useState, useEffect, useRef } from "react";
-import { Menu, X, Search, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import LanguageSwitcher from "./LanguageSwitcher";
 import Logo from "./Logo";
 
-/* ── Navigation structure ── */
 type NavItem =
   | { type: "link"; href: string; key: string }
   | {
@@ -24,11 +23,7 @@ const navItems: NavItem[] = [
     key: "ourNetwork",
     children: [
       { href: "/member-firms", key: "memberFirms", desc: "memberFirmsDesc" },
-      {
-        href: "/business-guides",
-        key: "businessGuides",
-        desc: "businessGuidesDesc",
-      },
+      { href: "/business-guides", key: "businessGuides", desc: "businessGuidesDesc" },
     ],
   },
   { type: "link", href: "/practice-areas", key: "practiceAreas" },
@@ -37,13 +32,38 @@ const navItems: NavItem[] = [
   { type: "link", href: "/contact", key: "contact" },
 ];
 
-/* ── Shared link style helper ── */
 const linkCls = (active: boolean) =>
-  `relative px-4 py-2 text-[0.6875rem] font-semibold tracking-[0.12em] uppercase transition-colors cursor-pointer whitespace-nowrap ${
+  `relative px-3.5 py-2 font-mono text-[0.6875rem] tracking-[0.18em] uppercase transition-colors cursor-pointer whitespace-nowrap ${
     active
-      ? "text-navy after:absolute after:bottom-0 after:left-4 after:right-4 after:h-[2px] after:bg-gold"
-      : "text-text-muted hover:text-navy"
+      ? "text-ink after:absolute after:bottom-1 after:left-3.5 after:right-3.5 after:h-px after:bg-vermillion"
+      : "text-text-muted hover:text-ink"
   }`;
+
+/** Live "Bangkok mean time" — Alliance secretariat is in Bangkok */
+function BangkokClock() {
+  const [time, setTime] = useState<string>("");
+
+  useEffect(() => {
+    const formatter = new Intl.DateTimeFormat("en-GB", {
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: false,
+      timeZone: "Asia/Bangkok",
+    });
+    const tick = () => setTime(formatter.format(new Date()));
+    tick();
+    const id = setInterval(tick, 30_000);
+    return () => clearInterval(id);
+  }, []);
+
+  if (!time) return null;
+  return (
+    <span className="hidden xl:inline-flex items-center gap-2 font-mono text-[0.6875rem] tracking-[0.18em] uppercase text-text-light">
+      <span className="inline-block w-1.5 h-1.5 rounded-full bg-vermillion animate-pulse" />
+      BKK {time}
+    </span>
+  );
+}
 
 export default function Navbar() {
   const t = useTranslations("nav");
@@ -52,7 +72,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 10);
+    const handleScroll = () => setScrolled(window.scrollY > 8);
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -61,18 +81,19 @@ export default function Navbar() {
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/98 backdrop-blur-md shadow-[0_1px_8px_rgba(10,22,40,0.06)] border-b border-transparent"
-          : "bg-white backdrop-blur-sm border-b border-border"
+          ? "bg-paper/95 backdrop-blur-md border-b border-bone-deep"
+          : "bg-paper border-b border-bone-deep/60"
       }`}
     >
-      <nav className="max-w-[82rem] mx-auto px-6 flex items-center h-16 lg:h-[4.5rem]">
-        {/* Logo */}
+      {/* Thin double-rule above nav — looks like a printed masthead */}
+      <div className="h-[5px] border-t border-b border-ink/15" aria-hidden />
+
+      <nav className="container-wide flex items-center h-16 lg:h-[4.75rem] gap-4">
         <Link href="/" className="cursor-pointer shrink-0">
-          <Logo variant="dark" className="h-8 lg:h-9 w-auto" />
+          <Logo variant="dark" className="h-9 lg:h-10 w-auto" />
         </Link>
 
-        {/* Desktop Nav — centered in remaining space */}
-        <div className="hidden lg:flex items-center justify-center flex-1">
+        <div className="hidden lg:flex items-center justify-end flex-1 gap-0">
           {navItems.map((item) =>
             item.type === "link" ? (
               <Link
@@ -86,9 +107,7 @@ export default function Navbar() {
               <DesktopDropdown
                 key={item.key}
                 label={t(item.key)}
-                active={item.children.some((c) =>
-                  pathname.startsWith(c.href)
-                )}
+                active={item.children.some((c) => pathname.startsWith(c.href))}
                 items={item.children.map((c) => ({
                   href: c.href,
                   label: t(c.key),
@@ -100,44 +119,38 @@ export default function Navbar() {
           )}
         </div>
 
-        {/* Right side — divider + language + CTA */}
-        <div className="flex items-center shrink-0 ml-auto lg:ml-0">
-          <div className="hidden lg:block w-px h-6 bg-border mx-3" />
+        <div className="flex items-center shrink-0 ml-auto lg:ml-4 gap-3">
+          <BangkokClock />
+          <span className="hidden lg:block w-px h-5 bg-bone-deep" />
           <LanguageSwitcher />
           <Link
             href="/member-firms"
-            className="hidden lg:inline-flex items-center gap-1.5 ml-3 px-5 py-2 bg-navy text-white font-semibold text-[0.65rem] tracking-[0.12em] uppercase hover:bg-gold transition-all duration-300 cursor-pointer"
+            className="hidden lg:inline-flex items-center gap-2 px-4 py-2 bg-ink text-bone font-mono text-[0.65rem] tracking-[0.2em] uppercase hover:bg-vermillion transition-colors duration-300 cursor-pointer relative"
           >
-            <Search className="w-3.5 h-3.5" />
-            Find a Firm
+            <span>Find a Firm</span>
+            <span aria-hidden>→</span>
           </Link>
 
-          {/* Mobile toggle */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden p-2 ml-1 text-text-muted hover:text-navy cursor-pointer"
+            className="lg:hidden p-2 text-ink cursor-pointer"
             aria-label="Toggle menu"
           >
-            {mobileOpen ? (
-              <X className="w-5 h-5" />
-            ) : (
-              <Menu className="w-5 h-5" />
-            )}
+            {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
       </nav>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.2, ease: "easeOut" }}
-            className="lg:hidden overflow-hidden border-t border-border bg-white"
+            transition={{ duration: 0.22, ease: "easeOut" }}
+            className="lg:hidden overflow-hidden border-t border-bone-deep bg-paper"
           >
-            <div className="container-narrow py-3 space-y-0.5">
+            <div className="container-narrow py-4 space-y-1">
               {navItems.map((item) => {
                 if (item.type === "link") {
                   const isActive = pathname.startsWith(item.href);
@@ -146,18 +159,16 @@ export default function Navbar() {
                       key={item.key}
                       href={item.href}
                       onClick={() => setMobileOpen(false)}
-                      className={`block px-4 py-2.5 text-xs font-semibold tracking-[0.14em] uppercase transition-colors cursor-pointer ${
+                      className={`block px-4 py-3 font-mono text-xs tracking-[0.18em] uppercase transition-colors cursor-pointer ${
                         isActive
-                          ? "text-navy bg-surface border-l-2 border-gold"
-                          : "text-text-muted hover:text-navy hover:bg-surface"
+                          ? "text-ink bg-bone border-l-2 border-vermillion"
+                          : "text-text-muted hover:text-ink hover:bg-bone"
                       }`}
                     >
                       {t(item.key)}
                     </Link>
                   );
                 }
-
-                /* Mobile dropdown — just show children inline with indent */
                 return (
                   <MobileDropdown
                     key={item.key}
@@ -171,10 +182,10 @@ export default function Navbar() {
                           key={c.key}
                           href={c.href}
                           onClick={() => setMobileOpen(false)}
-                          className={`block pl-8 pr-4 py-2.5 text-xs font-semibold tracking-[0.14em] uppercase transition-colors cursor-pointer ${
+                          className={`block pl-8 pr-4 py-3 font-mono text-xs tracking-[0.18em] uppercase transition-colors cursor-pointer ${
                             isActive
-                              ? "text-navy bg-surface border-l-2 border-gold"
-                              : "text-text-muted hover:text-navy hover:bg-surface"
+                              ? "text-ink bg-bone border-l-2 border-vermillion"
+                              : "text-text-muted hover:text-ink hover:bg-bone"
                           }`}
                         >
                           {t(c.key)}
@@ -189,10 +200,9 @@ export default function Navbar() {
                 <Link
                   href="/member-firms"
                   onClick={() => setMobileOpen(false)}
-                  className="flex items-center justify-center gap-2 w-full py-2.5 bg-navy text-white font-semibold text-xs tracking-[0.12em] uppercase cursor-pointer"
+                  className="flex items-center justify-center gap-2 w-full py-3 bg-ink text-bone font-mono text-xs tracking-[0.2em] uppercase cursor-pointer"
                 >
-                  <Search className="w-3.5 h-3.5" />
-                  Find a Firm
+                  Find a Firm <span aria-hidden>→</span>
                 </Link>
               </div>
             </div>
@@ -203,9 +213,6 @@ export default function Navbar() {
   );
 }
 
-/* ═══════════════════════════════════════════
-   Desktop Dropdown
-   ═══════════════════════════════════════════ */
 function DesktopDropdown({
   label,
   active,
@@ -227,12 +234,7 @@ function DesktopDropdown({
   };
 
   return (
-    <div
-      className="relative"
-      onMouseEnter={enter}
-      onMouseLeave={leave}
-    >
-      {/* Trigger */}
+    <div className="relative" onMouseEnter={enter} onMouseLeave={leave}>
       <button
         className={`${linkCls(active)} inline-flex items-center gap-1`}
         onClick={() => setOpen((v) => !v)}
@@ -240,44 +242,39 @@ function DesktopDropdown({
       >
         {label}
         <ChevronDown
-          className={`w-3 h-3 transition-transform duration-200 ${
-            open ? "rotate-180" : ""
-          }`}
+          className={`w-3 h-3 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
         />
       </button>
 
-      {/* Panel */}
       <AnimatePresence>
         {open && (
           <motion.div
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 8 }}
-            transition={{ duration: 0.15, ease: "easeOut" }}
+            transition={{ duration: 0.18, ease: "easeOut" }}
             className="absolute top-full left-1/2 -translate-x-1/2 pt-2 z-50"
           >
-            <div className="bg-white border border-border shadow-[0_12px_40px_rgba(10,22,40,0.1)] min-w-[260px]">
+            <div className="bg-paper border border-ink/20 shadow-[0_18px_40px_rgba(14,21,24,0.12)] min-w-[280px]">
               {items.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className={`block px-5 py-3.5 transition-colors cursor-pointer group ${
+                  className={`block px-5 py-4 transition-colors cursor-pointer group border-b border-bone-deep last:border-0 ${
                     item.active
-                      ? "bg-surface border-l-2 border-gold"
-                      : "hover:bg-surface border-l-2 border-transparent hover:border-gold/50"
+                      ? "bg-bone border-l-2 !border-l-vermillion"
+                      : "hover:bg-bone border-l-2 border-l-transparent"
                   }`}
                 >
                   <span
-                    className={`block text-[0.7rem] font-semibold tracking-[0.1em] uppercase ${
-                      item.active
-                        ? "text-navy"
-                        : "text-text-muted group-hover:text-navy"
+                    className={`block font-mono text-[0.7rem] tracking-[0.18em] uppercase ${
+                      item.active ? "text-ink" : "text-text-muted group-hover:text-ink"
                     }`}
                   >
                     {item.label}
                   </span>
-                  <span className="block text-[0.7rem] text-text-light mt-0.5 normal-case tracking-normal font-normal">
+                  <span className="block text-[0.78rem] text-text-light mt-1 normal-case tracking-normal font-normal leading-snug">
                     {item.desc}
                   </span>
                 </Link>
@@ -290,9 +287,6 @@ function DesktopDropdown({
   );
 }
 
-/* ═══════════════════════════════════════════
-   Mobile Dropdown (expand/collapse)
-   ═══════════════════════════════════════════ */
 function MobileDropdown({
   label,
   children,
@@ -307,13 +301,11 @@ function MobileDropdown({
     <div>
       <button
         onClick={() => setOpen((v) => !v)}
-        className="flex items-center justify-between w-full px-4 py-2.5 text-xs font-semibold tracking-[0.14em] uppercase text-text-muted hover:text-navy hover:bg-surface transition-colors cursor-pointer"
+        className="flex items-center justify-between w-full px-4 py-3 font-mono text-xs tracking-[0.18em] uppercase text-text-muted hover:text-ink hover:bg-bone transition-colors cursor-pointer"
       >
         {label}
         <ChevronDown
-          className={`w-3.5 h-3.5 transition-transform duration-200 ${
-            open ? "rotate-180" : ""
-          }`}
+          className={`w-3.5 h-3.5 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
         />
       </button>
       <AnimatePresence>
@@ -322,7 +314,7 @@ function MobileDropdown({
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.15, ease: "easeOut" }}
+            transition={{ duration: 0.18, ease: "easeOut" }}
             className="overflow-hidden"
           >
             {children}

@@ -250,6 +250,21 @@ Recent changes include the 2025 Union Taxation Law enacted 31 March 2025 (effect
 
 Non-compliance with tax obligations carries significant penalties. Late payment of tax results in interest charges (typically monthly) and potential penalties. Underreporting of income or non-filing can result in substantial penalties and, in cases of willful evasion, criminal prosecution. Businesses should maintain professional tax advisory support and ensure scrupulous compliance with filing requirements, estimated payments, and documentation standards.
 
+
+---
+
+## Sources and References
+
+- [Directorate of Investment and Company Administration (DICA)](https://www.dica.gov.mm)
+- [Internal Revenue Department, Myanmar](https://www.ird.gov.mm)
+- [Central Bank of Myanmar](https://www.cbm.gov.mm)
+- [Myanmar Investment Climate - US State Department](https://www.state.gov/reports/2025-investment-climate-statements/burma)
+- [World Bank - Myanmar Economic Data](https://data.worldbank.org/country/MM)
+- [IMF - Myanmar Country Page](https://www.imf.org/en/countries/mmr)
+- [ASEAN Briefing - Myanmar Business Guides](https://www.aseanbriefing.com/doing-business-guide/myanmar)
+- [PwC Myanmar - Tax Summaries](https://taxsummaries.pwc.com/myanmar)
+- [Asian Development Bank - Myanmar](https://www.adb.org/countries/myanmar)
+
 ---
 
 *This guide is for informational purposes only and does not constitute legal advice. For specific legal guidance, please contact the AAA member firm in Myanmar.*

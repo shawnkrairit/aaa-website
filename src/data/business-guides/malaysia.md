@@ -260,6 +260,23 @@ Foreign companies establishing Malaysian operations should engage qualified tax 
 
 The automatic exchange of information (AEOI) standards implemented through the Common Reporting Standard (CRS) require Malaysian financial institutions to report foreign account holders' financial information to tax authorities of residents' home jurisdictions. This development reduces opportunities for offshore tax planning while facilitating international tax compliance.
 
+
+---
+
+## Sources and References
+
+- [Malaysian Investment Development Authority (MIDA)](https://www.mida.gov.my)
+- [Inland Revenue Board of Malaysia (LHDN)](https://www.hasil.gov.my)
+- [Bank Negara Malaysia](https://www.bnm.gov.my)
+- [Companies Commission of Malaysia (SSM)](https://www.ssm.com.my)
+- [Malaysia Investment Climate - US State Department](https://www.state.gov/reports/2025-investment-climate-statements/malaysia)
+- [World Bank - Malaysia Economic Data](https://data.worldbank.org/country/MY)
+- [IMF - Malaysia Country Page](https://www.imf.org/en/countries/mys)
+- [Malaysia Briefing - Comprehensive Business Guides](https://www.aseanbriefing.com/doing-business-guide/malaysia)
+- [PwC Malaysia - Tax Summaries](https://taxsummaries.pwc.com/malaysia)
+- [Deloitte - Malaysia International Tax Highlights](https://www.deloitte.com)
+- [KPMG - Malaysia Tax Guide](https://kpmg.com/my)
+
 ---
 
 **Disclaimer:** This guide is for informational purposes only and does not constitute legal advice. For specific legal guidance and current regulatory requirements, please contact the ASEAN Attorneys Alliance member firm in Malaysia. Regulations and procedures are subject to change. Users are advised to verify all information with official government sources and qualified legal professionals before making business decisions.

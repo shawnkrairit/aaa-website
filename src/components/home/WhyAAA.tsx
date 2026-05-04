@@ -1,76 +1,70 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Globe, BookOpen, DollarSign, ShieldCheck } from "lucide-react";
 import AnimateInView from "@/components/ui/AnimateInView";
 import { StaggerContainer, StaggerItem } from "@/components/ui/StaggerGrid";
+import SectionMark from "@/components/ui/SectionMark";
 
-const features = [
-  { key: "coverage", icon: Globe },
-  { key: "expertise", icon: BookOpen },
-  { key: "fees", icon: DollarSign },
-  { key: "quality", icon: ShieldCheck },
+const doctrines = [
+  { key: "coverage",  num: "I",   theme: "Reach" },
+  { key: "expertise", num: "II",  theme: "Locality" },
+  { key: "fees",      num: "III", theme: "Economy" },
+  { key: "quality",   num: "IV",  theme: "Standard" },
 ] as const;
 
 export default function WhyAAA() {
   const t = useTranslations("whyAAA");
 
   return (
-    <section className="relative section-padding bg-navy overflow-hidden">
-      {/* Subtle gold radial glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,_rgba(161,124,69,0.08)_0%,_transparent_60%)]" />
-
-      {/* Gold diagonal traces */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div
-          className="absolute top-0 right-[10%] w-px h-[60%] origin-top bg-gradient-to-b from-gold/15 via-gold/5 to-transparent"
-          style={{ transform: "rotate(-8deg)" }}
-        />
-        <div
-          className="absolute bottom-0 left-[8%] w-px h-[40%] origin-bottom bg-gradient-to-t from-gold/10 via-gold/4 to-transparent"
-          style={{ transform: "rotate(10deg)" }}
-        />
+    <section className="relative bg-ink text-bone overflow-hidden">
+      {/* Top register */}
+      <div className="border-b border-bone/15">
+        <div className="container-wide flex items-center justify-between py-3 font-mono text-[0.62rem] tracking-[0.22em] uppercase text-bone/50">
+          <span>§02 — DOCTRINES OF THE ALLIANCE</span>
+          <span className="hidden md:inline">FOUR PRINCIPLES · TENETS</span>
+        </div>
       </div>
 
-      <div className="container-narrow relative z-10">
-        <AnimateInView className="text-center mb-16">
-          <div className="gold-accent mx-auto mb-8" />
-          <h2 className="text-3xl sm:text-4xl font-heading text-white mb-4">
+      {/* Subtle horizon glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_-10%,_rgba(201,71,42,0.10)_0%,_transparent_55%)] pointer-events-none" />
+
+      <div className="container-wide relative z-10 section-padding">
+        <AnimateInView className="max-w-3xl mb-16 lg:mb-20">
+          <SectionMark index="02" label="WHY THE ALLIANCE" tone="bone" />
+          <h2 className="text-bone mt-6 mb-6">
             {t("sectionTitle")}
+            <span className="display-italic text-vermillion">.</span>
           </h2>
-          <p className="text-white/50 text-lg max-w-2xl mx-auto">
+          <p className="text-bone/60 text-lg leading-relaxed max-w-2xl">
             {t("sectionSubtitle")}
           </p>
         </AnimateInView>
 
-        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {features.map(({ key, icon: Icon }) => (
-            <StaggerItem key={key}>
-              {/* Flip card wrapper — fixed height so all cards match */}
-              <div className="group h-72 [perspective:1000px] cursor-pointer">
-                <div className="relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                  {/* ── Front ── */}
-                  <div className="absolute inset-0 [backface-visibility:hidden] bg-white/[0.05] border border-white/10 backdrop-blur-sm flex flex-col items-center justify-center p-8 text-center">
-                    <div className="w-14 h-14 mb-6 border border-gold/30 flex items-center justify-center">
-                      <Icon className="w-6 h-6 text-gold" />
-                    </div>
-                    <h3 className="text-lg font-heading text-white">
-                      {t(key)}
-                    </h3>
-                  </div>
-
-                  {/* ── Back ── */}
-                  <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] bg-gold border border-gold flex flex-col items-center justify-center p-8 text-center">
-                    <Icon className="w-5 h-5 text-white mb-4" />
-                    <h3 className="text-base font-heading text-white mb-3">
-                      {t(key)}
-                    </h3>
-                    <p className="text-white/80 text-sm leading-relaxed">
-                      {t(`${key}Text`)}
-                    </p>
-                  </div>
-                </div>
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-bone/10">
+          {doctrines.map((d) => (
+            <StaggerItem key={d.key} className="bg-ink p-8 lg:p-10 group">
+              <div className="flex items-start justify-between mb-8">
+                <span className="font-mono text-[0.65rem] tracking-[0.22em] uppercase text-vermillion">
+                  Article {d.num}
+                </span>
+                <span className="font-mono text-[0.65rem] tracking-[0.22em] uppercase text-bone/40">
+                  {d.theme}
+                </span>
               </div>
+
+              <div
+                className="font-display text-7xl lg:text-8xl leading-none text-bone/85 group-hover:text-vermillion transition-colors duration-500 mb-8"
+                style={{ fontVariationSettings: '"opsz" 144, "SOFT" 80' }}
+              >
+                {d.num}
+              </div>
+
+              <h3 className="font-display text-bone text-2xl mb-3">
+                {t(d.key)}
+              </h3>
+              <p className="text-bone/55 leading-relaxed text-sm">
+                {t(`${d.key}Text`)}
+              </p>
             </StaggerItem>
           ))}
         </StaggerContainer>

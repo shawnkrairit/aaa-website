@@ -252,6 +252,23 @@ Foreign corporations operating in the Philippines through Philippine subsidiary 
 
 **Expatriate Tax Advantages**: Under limited circumstances, certain foreign expatriates working in the Philippines may qualify for tax-free treatment of foreign-source income or specific expatriate tax benefits, though these provisions have been restricted under recent tax law changes. Foreign workers should consult with tax specialists regarding available expatriate tax provisions and registration requirements. **Transfer Pricing Penalties and Disputes**: The BIR actively audits related-party transactions and transfer pricing positions, with audit adjustments common for foreign-controlled corporations. Significant penalties (up to 75 percent of the tax adjustment) apply to unreasonable transfer pricing positions lacking adequate documentation, making professional transfer pricing planning essential for multinational enterprises.
 
+
+---
+
+## Sources and References
+
+- [Philippine Economic Zone Authority (PEZA)](https://www.peza.gov.ph)
+- [Bureau of Internal Revenue (BIR)](https://www.bir.gov.ph)
+- [Bangko Sentral ng Pilipinas](https://www.bsp.gov.ph)
+- [Securities and Exchange Commission, Philippines](https://www.sec.gov.ph)
+- [Philippines Investment Climate - US State Department](https://www.state.gov/reports/2025-investment-climate-statements/philippines)
+- [World Bank - Philippines Economic Data](https://data.worldbank.org/country/PH)
+- [IMF - Philippines Country Page](https://www.imf.org/en/countries/phl)
+- [ASEAN Briefing - Philippines Business Guides](https://www.aseanbriefing.com/doing-business-guide/philippines)
+- [PwC Philippines - Tax Summaries](https://taxsummaries.pwc.com/philippines)
+- [SGV & Co. (EY Philippines) - Tax Updates](https://www.sgv.ph)
+- [KPMG - Philippines Tax Guide](https://kpmg.com/ph)
+
 ---
 
 *This guide is for informational purposes only and does not constitute legal advice. For specific legal guidance, please contact the AAA member firm in the Philippines.*

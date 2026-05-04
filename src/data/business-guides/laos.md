@@ -212,6 +212,21 @@ However, the practical implementation of these incentives varies, and investors 
 
 Some tax treaties between Laos and other countries may provide reduced withholding tax rates on certain categories of income. Investors should verify whether their home country has a tax treaty with Laos, as treaty benefits may apply if properly claimed. Foreign investors planning significant cross-border transactions should coordinate with their banks and tax advisors to ensure compliance with foreign exchange regulations and any reporting requirements. The Investment Promotion Law guarantees profit repatriation rights, establishing the legal framework for earnings, asset sale proceeds, and loan principal and interest to be freely transferable abroad through formal banking channels following satisfaction of tax obligations.
 
+
+---
+
+## Sources and References
+
+- [Ministry of Planning and Investment, Laos](https://www.investlaos.gov.la)
+- [Tax Department, Ministry of Finance, Laos](https://www.tax.gov.la)
+- [Bank of the Lao PDR](https://www.bol.gov.la)
+- [Laos Investment Climate - US State Department](https://www.state.gov/reports/2025-investment-climate-statements/laos)
+- [World Bank - Laos Economic Data](https://data.worldbank.org/country/LA)
+- [IMF - Lao PDR Country Page](https://www.imf.org/en/countries/lao)
+- [ASEAN Briefing - Laos Business Guides](https://www.aseanbriefing.com/doing-business-guide/laos)
+- [Asian Development Bank - Lao PDR](https://www.adb.org/countries/lao-pdr)
+- [PwC - Lao PDR Tax Summaries](https://taxsummaries.pwc.com)
+
 ---
 
 *This guide is for informational purposes only and does not constitute legal advice. For specific legal guidance, please contact the AAA member firm in Laos.*

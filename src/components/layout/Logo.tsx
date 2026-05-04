@@ -1,3 +1,7 @@
+/**
+ * AAA wordmark — original "A-bar" mark + SEAN ATTORNEYS ALLIANCE wordmark.
+ * Matches the live brand at aseanattorneysalliance.com.
+ */
 export default function Logo({
   variant = "dark",
   className = "",
@@ -6,7 +10,7 @@ export default function Logo({
   className?: string;
 }) {
   const textColor = variant === "dark" ? "#0A1628" : "#FFFFFF";
-  const taglineColor = variant === "dark" ? "#64748B" : "rgba(255,255,255,0.5)";
+  const taglineColor = variant === "dark" ? "#64748B" : "rgba(255,255,255,0.55)";
 
   return (
     <svg
@@ -17,18 +21,22 @@ export default function Logo({
       role="img"
       aria-label="ASEAN Attorneys Alliance"
     >
-      {/* Stylized A mark */}
-      <path
-        d="M2 36L18 4L34 36H28L18 12L8 36H2Z"
-        fill={textColor}
+      {/* Stylized A mark with horizontal crossbar */}
+      <path d="M2 36L18 4L34 36H28L18 12L8 36H2Z" fill={textColor} />
+      <line
+        x1="8"
+        y1="26"
+        x2="28"
+        y2="26"
+        stroke={textColor}
+        strokeWidth="2.5"
       />
-      <line x1="8" y1="26" x2="28" y2="26" stroke={textColor} strokeWidth="2.5" />
 
-      {/* SEAN ATTORNEYS ALLIANCE */}
+      {/* Wordmark — sans, all caps, wide letter-spacing */}
       <text
         x="42"
         y="18"
-        fontFamily="'Montserrat', 'Helvetica Neue', sans-serif"
+        fontFamily="var(--font-inter-tight), 'Helvetica Neue', sans-serif"
         fontSize="13"
         fontWeight="700"
         letterSpacing="0.15em"
@@ -41,7 +49,7 @@ export default function Logo({
       <text
         x="42"
         y="33"
-        fontFamily="'Montserrat', 'Helvetica Neue', sans-serif"
+        fontFamily="var(--font-inter-tight), 'Helvetica Neue', sans-serif"
         fontSize="8"
         fontWeight="500"
         letterSpacing="0.2em"

@@ -258,6 +258,24 @@ Thailand's primary indirect tax is Value-Added Tax (VAT), which applies to suppl
 
 VAT registration is mandatory for businesses whose annual revenue exceeds 1.8 million Thai Baht, or businesses may voluntarily enter the VAT system to claim input tax credits. Registered VAT businesses remit VAT on monthly or quarterly bases (depending on business size and structure), with VAT calculated as gross sales VAT minus input VAT on business purchases and imports. Business owners registered for VAT are responsible for collecting VAT from customers and remitting it to the Revenue Department on the appropriate filing date. Certain goods and services are classified as special transactions with either 0 percent VAT rates or complete VAT exemptions, including many essential goods, healthcare services, and financial services.
 
+
+---
+
+## Sources and References
+
+- [Board of Investment of Thailand (BOI)](https://www.boi.go.th)
+- [Revenue Department, Ministry of Finance](https://www.rd.go.th)
+- [Bank of Thailand](https://www.bot.or.th)
+- [Department of Business Development (DBD)](https://www.dbd.go.th)
+- [Thailand Investment Climate - US State Department](https://www.state.gov/reports/2025-investment-climate-statements/thailand)
+- [World Bank - Thailand Economic Data](https://data.worldbank.org/country/TH)
+- [IMF - Thailand Country Page](https://www.imf.org/en/countries/tha)
+- [Thailand Briefing - Comprehensive Business Guides](https://www.aseanbriefing.com/doing-business-guide/thailand)
+- [PwC Thailand - Tax Summaries](https://taxsummaries.pwc.com/thailand)
+- [Baker McKenzie - Thailand Tax Updates](https://www.bakermckenzie.com)
+- [KPMG - Thailand Tax Guide](https://kpmg.com/th)
+- [Tilleke & Gibbins - Thailand Legal Updates](https://www.tilleke.com)
+
 ---
 
 *This guide is for informational purposes only and does not constitute legal advice. For specific legal guidance, please contact the AAA member firm in the relevant jurisdiction.*

@@ -298,6 +298,23 @@ Singapore provides various tax incentives designed to attract foreign investment
 
 **Banking and Financial Infrastructure:** Singapore's banking sector is highly sophisticated and international firms should have no difficulty establishing banking relationships. Opening a corporate bank account typically requires submission of corporate documents (articles of association, director and shareholder information), identification verification, and business justification. Multiple banks should be approached to achieve favorable terms. The ability to maintain multi-currency accounts, access regional payment systems, and leverage Singapore's foreign exchange infrastructure is a significant operational advantage for regional headquarters or trading operations.
 
+
+---
+
+## Sources and References
+
+- [Economic Development Board (EDB)](https://www.edb.gov.sg)
+- [Inland Revenue Authority of Singapore (IRAS)](https://www.iras.gov.sg)
+- [Monetary Authority of Singapore (MAS)](https://www.mas.gov.sg)
+- [Accounting and Corporate Regulatory Authority (ACRA)](https://www.acra.gov.sg)
+- [Singapore Investment Climate - US State Department](https://www.state.gov/reports/2025-investment-climate-statements/singapore)
+- [World Bank - Singapore Economic Data](https://data.worldbank.org/country/SG)
+- [IMF - Singapore Country Page](https://www.imf.org/en/countries/sgp)
+- [Singapore Briefing - Comprehensive Business Guides](https://www.aseanbriefing.com/doing-business-guide/singapore)
+- [PwC Singapore - Tax Summaries](https://taxsummaries.pwc.com/singapore)
+- [Deloitte - Singapore International Tax Highlights](https://www.deloitte.com)
+- [KPMG - Singapore Tax Guide](https://kpmg.com/sg)
+
 ---
 
 *This guide is for informational purposes only and does not constitute legal advice. For specific legal guidance, please contact the AAA member firm in Singapore.*

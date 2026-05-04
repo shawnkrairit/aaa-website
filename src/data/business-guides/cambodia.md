@@ -360,6 +360,22 @@ Key tax compliance obligations for businesses in Cambodia include:
 
 Proper tax compliance requires engagement of qualified accounting professionals, maintenance of detailed records, timely filing and payment of all applicable taxes, and regular review of tax law changes. The General Department of Taxation maintains offices throughout Cambodia and has increasingly implemented electronic tax administration systems enabling online tax filings and payments. Professional tax advisory services are available from international accounting firms, Cambodian accounting firms, and tax specialists, with typical costs ranging from USD 1,000 to 5,000+ annually depending on business complexity and scope of tax obligations.
 
+
+---
+
+## Sources and References
+
+- [Council for the Development of Cambodia (CDC)](https://www.cambodiainvestment.gov.kh)
+- [General Department of Taxation, Cambodia](https://www.tax.gov.kh)
+- [National Bank of Cambodia](https://www.nbc.gov.kh)
+- [Cambodia Investment Climate - US State Department](https://www.state.gov/reports/2025-investment-climate-statements/cambodia)
+- [World Bank - Cambodia Economic Data](https://data.worldbank.org/country/KH)
+- [IMF - Cambodia Country Page](https://www.imf.org/en/countries/khm)
+- [ASEAN Briefing - Cambodia Business Guides](https://www.aseanbriefing.com/doing-business-guide/cambodia)
+- [PwC Cambodia - Tax Summaries](https://taxsummaries.pwc.com/cambodia)
+- [Deloitte - International Tax Cambodia Highlights](https://www.deloitte.com)
+- [Cambodia Law and Policy Journal](https://www.cambodia-law.org)
+
 ---
 
 *This guide is for informational purposes only and does not constitute legal advice. For specific legal guidance, please contact the AAA member firm in Cambodia.*

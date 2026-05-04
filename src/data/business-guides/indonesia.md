@@ -238,6 +238,23 @@ Penalties for late filing and underpayment range from administrative penalties o
 
 Foreign investors are well-advised to engage Indonesian tax accountants and advisors with expertise in transfer pricing, treaty benefits claims, and compliance best practices, as the DGT takes an increasingly sophisticated approach to enforcement and audit. Advance Pricing Agreements (APAs) can be negotiated with the DGT to establish transfer pricing positions in advance, reducing compliance uncertainty for multinational enterprises planning substantial cross-border transactions. Tax amnesty programs have been offered periodically by the government and may be relevant for businesses entering Indonesia or restructuring pre-existing operations, though such programs generally involve significant payment requirements and are available only during designated periods. Professional tax compliance management, particularly for multinational enterprises and complex business structures, is essential to minimize audit risk, penalties, and reputational damage.
 
+
+---
+
+## Sources and References
+
+- [Indonesia Investment Coordinating Board (BKPM)](https://www.bkpm.go.id)
+- [Directorate General of Taxes (DGT)](https://www.pajak.go.id)
+- [Bank Indonesia](https://www.bi.go.id)
+- [Indonesia Investment Climate - US State Department](https://www.state.gov/reports/2025-investment-climate-statements/indonesia)
+- [World Bank - Indonesia Economic Data](https://data.worldbank.org/country/ID)
+- [IMF - Indonesia Country Page](https://www.imf.org/en/countries/idn)
+- [Indonesia Briefing - Comprehensive Business Guides](https://www.indonesia-briefing.com)
+- [PwC Indonesia - Tax Summaries](https://taxsummaries.pwc.com/indonesia)
+- [KPMG - Indonesia Tax Guide](https://kpmg.com/id)
+- [Financial Services Authority (OJK)](https://www.ojk.go.id)
+- [Baker McKenzie - Indonesia Tax Updates](https://www.bakermckenzie.com)
+
 ---
 
 *This guide is for informational purposes only and does not constitute legal advice. For specific legal guidance, please contact the AAA member firm in Indonesia.*
