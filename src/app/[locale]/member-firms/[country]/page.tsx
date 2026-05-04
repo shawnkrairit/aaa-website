@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { countries, getCountryBySlug } from "@/data/countries";
@@ -23,9 +23,10 @@ export function generateStaticParams() {
 export default async function CountryPage({
   params,
 }: {
-  params: Promise<{ country: string }>;
+  params: Promise<{ locale: string; country: string }>;
 }) {
-  const { country: countrySlug } = await params;
+  const { locale, country: countrySlug } = await params;
+  setRequestLocale(locale);
   const country = getCountryBySlug(countrySlug);
   const t = await getTranslations("memberFirms");
 

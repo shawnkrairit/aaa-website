@@ -4,7 +4,9 @@ import { createNavigation } from "next-intl/navigation";
 export const routing = defineRouting({
   locales: ["en", "th", "ms", "id", "vi", "km", "lo", "my", "tl", "zh"],
   defaultLocale: "en",
-  localePrefix: "as-needed",
+  // Static export (GitHub Pages) cannot run middleware, so every URL must
+  // include its locale prefix. The root /index.html redirects to /en/.
+  localePrefix: "always",
 });
 
 export const { Link, redirect, usePathname, useRouter, getPathname } =

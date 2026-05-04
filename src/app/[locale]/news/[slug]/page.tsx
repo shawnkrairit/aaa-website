@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { setRequestLocale } from "next-intl/server";
 import { newsArticles, getArticleBySlug } from "@/data/news";
 import { Link } from "@/i18n/routing";
 import { ArrowLeft, Calendar, Tag } from "lucide-react";
@@ -10,9 +11,10 @@ export function generateStaticParams() {
 export default async function ArticlePage({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }) {
-  const { slug } = await params;
+  const { locale, slug } = await params;
+  setRequestLocale(locale);
   const article = getArticleBySlug(slug);
 
   if (!article) {

@@ -1,11 +1,22 @@
 import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import { countries } from "@/data/countries";
 import { memberFirms } from "@/data/firms";
 import { MapPin, Globe, Scale } from "lucide-react";
 import CountryFlag from "@/components/ui/CountryFlag";
 
-export default function MemberFirmsPage() {
+export default async function MemberFirmsPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  return <MemberFirmsContent />;
+}
+
+function MemberFirmsContent() {
   const t = useTranslations("memberFirms");
 
   return (

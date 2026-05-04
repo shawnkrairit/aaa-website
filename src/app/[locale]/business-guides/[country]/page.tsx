@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { getGuide, getAllGuideSlugs } from "@/lib/guides";
@@ -15,9 +15,10 @@ export function generateStaticParams() {
 export default async function BusinessGuidePage({
   params,
 }: {
-  params: Promise<{ country: string }>;
+  params: Promise<{ locale: string; country: string }>;
 }) {
-  const { country: slug } = await params;
+  const { locale, country: slug } = await params;
+  setRequestLocale(locale);
   const guide = await getGuide(slug);
   const t = await getTranslations("businessGuides");
 

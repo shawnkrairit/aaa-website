@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 import { practiceAreas } from "@/data/practice-areas";
 import {
   Building2,
@@ -23,7 +24,17 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Calculator,
 };
 
-export default function PracticeAreasPage() {
+export default async function PracticeAreasPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  return <PracticeAreasContent />;
+}
+
+function PracticeAreasContent() {
   const t = useTranslations("practiceAreas");
 
   return (

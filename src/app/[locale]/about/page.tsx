@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 import {
   Heart,
   Award,
@@ -10,7 +11,17 @@ import {
   CheckCircle,
 } from "lucide-react";
 
-export default function AboutPage() {
+export default async function AboutPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  return <AboutContent />;
+}
+
+function AboutContent() {
   const t = useTranslations("about");
 
   const values = [

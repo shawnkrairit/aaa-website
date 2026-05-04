@@ -1,11 +1,17 @@
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import { getAllGuideSummaries } from "@/lib/guides";
 import { getCountryBySlug } from "@/data/countries";
 import { ArrowRight, BookOpen } from "lucide-react";
 import CountryFlag from "@/components/ui/CountryFlag";
 
-export default async function BusinessGuidesPage() {
+export default async function BusinessGuidesPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("businessGuides");
   const guides = getAllGuideSummaries();
 
