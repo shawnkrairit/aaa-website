@@ -61,7 +61,7 @@ export default function ASEANMap() {
           </div>
 
           <div className="relative aspect-[5/4] w-full">
-            <ASEANMapBg className="absolute inset-0 w-full h-full text-ink/40" />
+            <ASEANMapBg className="map-tinted absolute inset-0 w-full h-full text-ink/40" />
 
             <svg
               viewBox="0 0 1000 800"
@@ -100,51 +100,66 @@ export default function ASEANMap() {
                 const country = countries.find((c) => c.slug === p.slug);
                 if (!country) return null;
                 const isHover = hovered === p.slug;
+                const isTiny = p.slug === "singapore" || p.slug === "timor-leste";
+                const dotR = (isHover ? 11 : 9) + (isTiny ? 2 : 0);
                 return (
                   <g key={p.slug}>
                     {/* Outer halo */}
                     <circle
                       cx={p.x}
                       cy={p.y}
-                      r={isHover ? 24 : 16}
-                      fill="rgba(201,71,42,0.15)"
+                      r={isHover ? 28 : 20}
+                      fill="rgba(10,22,40,0.10)"
                       style={{ transition: "r 240ms ease" }}
                     />
-                    {/* Center dot */}
+                    {/* Center dot — navy with gold ring */}
                     <circle
                       cx={p.x}
                       cy={p.y}
-                      r={isHover ? 8 : 6}
-                      fill="#C9472A"
-                      stroke="#F4EFE6"
-                      strokeWidth="1.5"
+                      r={dotR}
+                      fill="#0A1628"
+                      stroke="#B89464"
+                      strokeWidth="2.5"
+                      style={{ transition: "r 200ms ease" }}
+                    />
+                    <circle
+                      cx={p.x}
+                      cy={p.y}
+                      r={dotR - 4}
+                      fill="#B89464"
                       style={{ transition: "r 200ms ease" }}
                     />
                     {/* Label */}
                     <text
-                      x={p.x + 14}
+                      x={p.x + dotR + 6}
                       y={p.y + 4}
                       fontSize="14"
                       fontFamily="var(--font-jetbrains-mono), monospace"
-                      fontWeight="500"
-                      fill={isHover ? "#C9472A" : "#0E1518"}
+                      fontWeight="600"
+                      fill={isHover ? "#B89464" : "#0A1628"}
+                      stroke="#FFFFFF"
+                      strokeWidth="3"
+                      paintOrder="stroke"
                       style={{
                         letterSpacing: "0.18em",
-                        opacity: isHover ? 1 : 0.85,
+                        opacity: isHover ? 1 : 0.95,
                         transition: "fill 240ms",
                       }}
                     >
                       {country.name.toUpperCase()}
                     </text>
                     <text
-                      x={p.x + 14}
+                      x={p.x + dotR + 6}
                       y={p.y + 22}
                       fontSize="11"
                       fontFamily="var(--font-jetbrains-mono), monospace"
                       fill="#5A6670"
+                      stroke="#FFFFFF"
+                      strokeWidth="2.5"
+                      paintOrder="stroke"
                       style={{
                         letterSpacing: "0.14em",
-                        opacity: isHover ? 0.85 : 0.55,
+                        opacity: isHover ? 0.95 : 0.7,
                       }}
                     >
                       {p.iso} · {p.capital.toUpperCase()}

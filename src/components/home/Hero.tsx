@@ -120,21 +120,17 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.7, delay: 0.6 }}
-              className="grid grid-cols-2 sm:grid-cols-4 border-t border-white/15"
+              className="grid grid-cols-2 sm:grid-cols-4 border-t border-b border-white/15 divide-x divide-y sm:divide-y-0 divide-white/15"
             >
-              {ledger.map((s, i) => (
+              {ledger.map((s) => (
                 <div
                   key={s.label}
-                  className={`py-5 ${
-                    i > 0 ? "sm:border-l border-white/15" : ""
-                  } ${i % 2 === 1 ? "border-l sm:border-l" : ""} ${
-                    i < 2 ? "border-b sm:border-b-0 border-white/15" : ""
-                  }`}
+                  className="px-5 lg:px-6 py-6 text-center flex flex-col items-center"
                 >
                   <div className="font-display text-3xl lg:text-4xl text-gold leading-none num-mono">
                     {s.num}
                   </div>
-                  <div className="mt-2 font-mono text-[0.65rem] tracking-[0.22em] uppercase text-white/45">
+                  <div className="mt-3 font-mono text-[0.65rem] tracking-[0.22em] uppercase text-white/50">
                     {s.label}
                   </div>
                 </div>
@@ -158,7 +154,7 @@ export default function Hero() {
               </div>
 
               <div className="relative w-full h-[calc(100%-110px)]">
-                <ASEANMapBg className="absolute inset-0 w-full h-full text-white/40" />
+                <ASEANMapBg className="map-tinted absolute inset-0 w-full h-full text-white/40" />
 
                 <svg
                   viewBox="0 0 1000 800"
@@ -191,64 +187,81 @@ export default function Hero() {
                     />
                   ))}
 
-                  {countryPins.map((p, i) => (
-                    <g key={p.slug}>
-                      <motion.circle
-                        cx={p.x}
-                        cy={p.y}
-                        r="14"
-                        fill="rgba(184,148,100,0.30)"
-                        initial={{ scale: 0, opacity: 0 }}
-                        animate={{ scale: [0, 1.3, 1], opacity: [0, 0.7, 0.55] }}
-                        transition={{ delay: 0.4 + i * 0.06, duration: 0.9 }}
-                        style={{ transformOrigin: `${p.x}px ${p.y}px` }}
-                      />
-                      <motion.circle
-                        cx={p.x}
-                        cy={p.y}
-                        r="6"
-                        fill="#B89464"
-                        stroke="#0A1628"
-                        strokeWidth="1.5"
-                        initial={{ scale: 0 }}
-                        animate={{ scale: 1 }}
-                        transition={{ delay: 0.5 + i * 0.06, duration: 0.4 }}
-                        style={{
-                          transformOrigin: `${p.x}px ${p.y}px`,
-                          cursor: "pointer",
-                          filter:
-                            hovered === p.slug
-                              ? "drop-shadow(0 0 6px rgba(184,148,100,0.9))"
-                              : undefined,
-                        }}
-                      />
-                      <circle
-                        cx={p.x}
-                        cy={p.y}
-                        r="22"
-                        fill="transparent"
-                        onMouseEnter={() => setHovered(p.slug)}
-                        onMouseLeave={() => setHovered(null)}
-                        style={{ cursor: "pointer" }}
-                      />
-                      <text
-                        x={p.x}
-                        y={p.y - 14}
-                        fontSize="13"
-                        fontFamily="var(--font-jetbrains-mono), monospace"
-                        fontWeight="500"
-                        textAnchor="middle"
-                        fill="#F7F5F0"
-                        style={{
-                          letterSpacing: "0.16em",
-                          opacity: hovered === p.slug ? 1 : 0.7,
-                          transition: "opacity 240ms",
-                        }}
-                      >
-                        {p.iso}
-                      </text>
-                    </g>
-                  ))}
+                  {countryPins.map((p, i) => {
+                    // Singapore + Timor-Leste are tiny — give them an extra prominence ring
+                    const isTiny = p.slug === "singapore" || p.slug === "timor-leste";
+                    return (
+                      <g key={p.slug}>
+                        <motion.circle
+                          cx={p.x}
+                          cy={p.y}
+                          r={isTiny ? 22 : 18}
+                          fill="rgba(14,21,24,0.6)"
+                          initial={{ scale: 0, opacity: 0 }}
+                          animate={{ scale: 1, opacity: 1 }}
+                          transition={{ delay: 0.4 + i * 0.05, duration: 0.6 }}
+                          style={{ transformOrigin: `${p.x}px ${p.y}px` }}
+                        />
+                        <motion.circle
+                          cx={p.x}
+                          cy={p.y}
+                          r={isTiny ? 16 : 13}
+                          fill="rgba(201,164,107,0.22)"
+                          initial={{ scale: 0 }}
+                          animate={{ scale: [0, 1.4, 1] }}
+                          transition={{ delay: 0.45 + i * 0.05, duration: 0.9 }}
+                          style={{ transformOrigin: `${p.x}px ${p.y}px` }}
+                        />
+                        <motion.circle
+                          cx={p.x}
+                          cy={p.y}
+                          r={isTiny ? 10 : 8}
+                          fill="#F0CD7A"
+                          stroke="#0A1628"
+                          strokeWidth="2"
+                          initial={{ scale: 0 }}
+                          animate={{ scale: 1 }}
+                          transition={{ delay: 0.5 + i * 0.05, duration: 0.4 }}
+                          style={{
+                            transformOrigin: `${p.x}px ${p.y}px`,
+                            cursor: "pointer",
+                            filter:
+                              hovered === p.slug
+                                ? "drop-shadow(0 0 8px rgba(240,205,122,0.95))"
+                                : undefined,
+                          }}
+                        />
+                        <circle
+                          cx={p.x}
+                          cy={p.y}
+                          r="26"
+                          fill="transparent"
+                          onMouseEnter={() => setHovered(p.slug)}
+                          onMouseLeave={() => setHovered(null)}
+                          style={{ cursor: "pointer" }}
+                        />
+                        <text
+                          x={p.x}
+                          y={p.y - (isTiny ? 18 : 16)}
+                          fontSize="14"
+                          fontFamily="var(--font-jetbrains-mono), monospace"
+                          fontWeight="600"
+                          textAnchor="middle"
+                          fill="#FFFFFF"
+                          stroke="#0A1628"
+                          strokeWidth="3"
+                          paintOrder="stroke"
+                          style={{
+                            letterSpacing: "0.18em",
+                            opacity: hovered === p.slug ? 1 : 0.92,
+                            transition: "opacity 240ms",
+                          }}
+                        >
+                          {p.iso}
+                        </text>
+                      </g>
+                    );
+                  })}
                 </svg>
               </div>
 

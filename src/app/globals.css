@@ -416,6 +416,26 @@
     color: var(--color-gold-light);
   }
 
+  /* ── Per-country tints for the atlas plate ──
+     Each ASEAN country gets a distinct muted earth-tone fill.
+     Adjacent countries always contrast. Stroke + opacity vary. */
+  .map-tinted [data-country] {
+    stroke: rgba(247, 245, 240, 0.35);
+    stroke-width: 0.6;
+    paint-order: stroke fill;
+  }
+  .map-tinted [data-country="myanmar"]      { fill: #B88554; opacity: 0.78; }
+  .map-tinted [data-country="thailand"]     { fill: #D2A368; opacity: 0.85; }
+  .map-tinted [data-country="laos"]         { fill: #8E9A6A; opacity: 0.82; }
+  .map-tinted [data-country="vietnam"]      { fill: #C97A55; opacity: 0.82; }
+  .map-tinted [data-country="cambodia"]     { fill: #BFA985; opacity: 0.82; }
+  .map-tinted [data-country="malaysia"]     { fill: #94714A; opacity: 0.85; }
+  .map-tinted [data-country="singapore"]    { fill: #F0CD7A; opacity: 1; stroke-width: 1.2; }
+  .map-tinted [data-country="brunei"]       { fill: #E5BB85; opacity: 0.95; stroke-width: 1; }
+  .map-tinted [data-country="indonesia"]    { fill: #A88857; opacity: 0.82; }
+  .map-tinted [data-country="philippines"]  { fill: #7B8E72; opacity: 0.82; }
+  .map-tinted [data-country="timor-leste"]  { fill: #E5BB85; opacity: 1; stroke-width: 1.2; }
+
   /* Pin pulse for map markers */
   .pin {
     position: relative;
