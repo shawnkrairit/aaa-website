@@ -23,20 +23,20 @@ export default function Footer() {
           {/* Brand block */}
           <div className="col-span-12 lg:col-span-4">
             <Logo variant="light" className="h-10 w-auto mb-6" />
-            <p className="text-bone/65 text-sm leading-relaxed mb-8 max-w-md">
+            <p className="text-bone/80 text-sm leading-relaxed mb-8 max-w-md">
               {t("description")}
             </p>
 
             <div className="grid grid-cols-2 gap-4 max-w-sm pt-6 border-t border-bone/15">
               <div>
                 <div className="font-display text-3xl text-bone num-mono">11</div>
-                <div className="mt-1 font-mono text-[0.6rem] tracking-[0.22em] uppercase text-bone/40">
+                <div className="mt-1 font-mono text-[0.6rem] tracking-[0.22em] uppercase text-bone/60">
                   Jurisdictions
                 </div>
               </div>
               <div>
                 <div className="font-display text-3xl text-bone num-mono">16</div>
-                <div className="mt-1 font-mono text-[0.6rem] tracking-[0.22em] uppercase text-bone/40">
+                <div className="mt-1 font-mono text-[0.6rem] tracking-[0.22em] uppercase text-bone/60">
                   Member Firms
                 </div>
               </div>
@@ -61,7 +61,7 @@ export default function Footer() {
                 <li key={key}>
                   <Link
                     href={href}
-                    className="text-bone/60 hover:text-bone text-sm transition-colors cursor-pointer link-underline"
+                    className="text-bone/75 hover:text-bone text-sm transition-colors cursor-pointer link-underline"
                   >
                     {nav(key)}
                   </Link>
@@ -84,13 +84,13 @@ export default function Footer() {
                       href={`/member-firms/${c.slug}`}
                       className="group flex items-baseline justify-between gap-3 text-sm"
                     >
-                      <span className="flex items-baseline gap-2.5 text-bone/60 group-hover:text-bone transition-colors">
-                        <span className="font-mono text-[0.6rem] tracking-[0.22em] uppercase text-bone/35 w-6">
+                      <span className="flex items-baseline gap-2.5 text-bone/75 group-hover:text-bone transition-colors">
+                        <span className="font-mono text-[0.6rem] tracking-[0.22em] uppercase text-bone/55 w-6">
                           {pin?.iso ?? c.isoCode}
                         </span>
                         {c.name}
                       </span>
-                      <span className="font-mono text-[0.62rem] tracking-[0.22em] uppercase text-bone/35">
+                      <span className="font-mono text-[0.62rem] tracking-[0.22em] uppercase text-bone/55">
                         {c.firmCount}
                       </span>
                     </Link>
@@ -108,13 +108,13 @@ export default function Footer() {
             <ul className="space-y-3.5 text-sm mb-8">
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 mt-0.5 text-vermillion shrink-0" />
-                <span className="text-bone/65 leading-relaxed">{t("address")}</span>
+                <span className="text-bone/80 leading-relaxed">{t("address")}</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-vermillion shrink-0" />
                 <a
                   href="tel:+6622330055"
-                  className="text-bone/65 hover:text-bone transition-colors cursor-pointer font-mono text-[0.8rem]"
+                  className="text-bone/80 hover:text-bone transition-colors cursor-pointer font-mono text-[0.8rem]"
                 >
                   {t("phone")}
                 </a>
@@ -123,7 +123,7 @@ export default function Footer() {
                 <Mail className="w-4 h-4 text-vermillion shrink-0" />
                 <a
                   href="mailto:info@aseanattorneysalliance.com"
-                  className="text-bone/65 hover:text-bone transition-colors cursor-pointer text-sm break-all"
+                  className="text-bone/80 hover:text-bone transition-colors cursor-pointer text-sm break-all"
                 >
                   {t("email")}
                 </a>
@@ -140,7 +140,7 @@ export default function Footer() {
 
       {/* Colophon footer */}
       <div className="border-t border-bone/15">
-        <div className="container-wide py-5 flex flex-col md:flex-row items-center justify-between gap-3 font-mono text-[0.62rem] tracking-[0.22em] uppercase text-bone/40">
+        <div className="container-wide py-5 flex flex-col md:flex-row items-center justify-between gap-3 font-mono text-[0.62rem] tracking-[0.22em] uppercase text-bone/60">
           <span>© {new Date().getFullYear()} {t("copyright").toUpperCase()}</span>
           <span>VOL. IX · ISSUE 2026 · SET IN FRAUNCES &amp; INTER TIGHT</span>
           <span className="text-vermillion">A UNITY OF PROFICIENCY</span>

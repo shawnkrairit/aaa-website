@@ -4,7 +4,7 @@ import { useLocale } from "next-intl";
 import { useRouter, usePathname } from "@/i18n/routing";
 import { routing, localeNames } from "@/i18n/routing";
 import { useState, useRef, useEffect } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Globe } from "lucide-react";
 
 export default function LanguageSwitcher() {
   const locale = useLocale();
@@ -32,10 +32,12 @@ export default function LanguageSwitcher() {
     <div ref={ref} className="relative">
       <button
         onClick={() => setOpen(!open)}
-        className="flex items-center gap-1.5 px-3 py-2 text-xs font-semibold tracking-wider uppercase text-text-muted hover:text-navy transition-colors cursor-pointer"
+        className="flex items-center gap-1.5 px-3 py-2 font-mono text-[0.6875rem] tracking-[0.18em] uppercase text-text-muted hover:text-ink transition-colors cursor-pointer"
         aria-label="Switch language"
       >
-        <span className="hidden sm:inline">{localeNames[locale]}</span>
+        <Globe className="w-3.5 h-3.5" />
+        <span>{locale.toUpperCase()}</span>
+        <span className="hidden sm:inline ml-0.5 text-text-light">— {localeNames[locale]}</span>
         <ChevronDown className={`w-3 h-3 transition-transform ${open ? "rotate-180" : ""}`} />
       </button>
       {open && (

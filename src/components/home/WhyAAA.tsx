@@ -19,7 +19,7 @@ export default function WhyAAA() {
     <section className="relative bg-ink text-bone overflow-hidden">
       {/* Top register */}
       <div className="border-b border-bone/15">
-        <div className="container-wide flex items-center justify-between py-3 font-mono text-[0.62rem] tracking-[0.22em] uppercase text-bone/50">
+        <div className="container-wide flex items-center justify-between py-3 font-mono text-[0.62rem] tracking-[0.22em] uppercase text-bone/65">
           <span>§02 — DOCTRINES OF THE ALLIANCE</span>
           <span className="hidden md:inline">FOUR PRINCIPLES · TENETS</span>
         </div>
@@ -35,7 +35,7 @@ export default function WhyAAA() {
             {t("sectionTitle")}
             <span className="display-italic text-vermillion">.</span>
           </h2>
-          <p className="text-bone/60 text-lg leading-relaxed max-w-2xl">
+          <p className="text-bone/75 text-lg leading-relaxed max-w-2xl">
             {t("sectionSubtitle")}
           </p>
         </AnimateInView>
@@ -47,7 +47,7 @@ export default function WhyAAA() {
                 <span className="font-mono text-[0.65rem] tracking-[0.22em] uppercase text-vermillion">
                   Article {d.num}
                 </span>
-                <span className="font-mono text-[0.65rem] tracking-[0.22em] uppercase text-bone/40">
+                <span className="font-mono text-[0.65rem] tracking-[0.22em] uppercase text-bone/60">
                   {d.theme}
                 </span>
               </div>
@@ -62,7 +62,7 @@ export default function WhyAAA() {
               <h3 className="font-display text-bone text-2xl mb-3">
                 {t(d.key)}
               </h3>
-              <p className="text-bone/55 leading-relaxed text-sm">
+              <p className="text-bone/75 leading-relaxed text-sm">
                 {t(`${d.key}Text`)}
               </p>
             </StaggerItem>

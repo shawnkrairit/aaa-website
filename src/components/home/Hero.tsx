@@ -18,11 +18,14 @@ const ledger = [
 export default function Hero() {
   const t = useTranslations("hero");
   const [hovered, setHovered] = useState<string | null>(null);
+  const [pinned, setPinned] = useState<string | null>(null);
 
-  const hoveredCountry =
-    hovered ? countries.find((c) => c.slug === hovered) : null;
-  const hoveredPin =
-    hovered ? countryPins.find((p) => p.slug === hovered) : null;
+  // Pinned (tapped) takes precedence over hovered (transient mouseover)
+  const active = pinned ?? hovered;
+  const activeCountry =
+    active ? countries.find((c) => c.slug === active) : null;
+  const activePin =
+    active ? countryPins.find((p) => p.slug === active) : null;
 
   return (
     <section className="relative bg-ink text-white overflow-hidden">
@@ -37,7 +40,7 @@ export default function Hero() {
 
       {/* Top register: filing strip */}
       <div className="border-b border-white/10 relative z-10">
-        <div className="container-wide flex items-center justify-between gap-6 py-2.5 font-mono text-[0.65rem] tracking-[0.22em] uppercase text-white/45">
+        <div className="container-wide flex items-center justify-between gap-6 py-2.5 font-mono text-[0.65rem] tracking-[0.22em] uppercase text-white/75">
           <span className="hidden sm:inline">FILE №&nbsp;AAA/2016 · ASEAN/SECRETARIAT</span>
           <span className="hidden md:inline">Charn Issara Tower · Bangkok 10500</span>
           <span className="text-gold">EST. MMXVI</span>
@@ -57,7 +60,7 @@ export default function Hero() {
             >
               <span className="text-gold">VOL. IX</span>
               <span className="h-px w-6 bg-white/30" aria-hidden />
-              <span className="text-white/55">A UNITY OF PROFICIENCY</span>
+              <span className="text-white/75">A UNITY OF PROFICIENCY</span>
             </motion.div>
 
             <motion.h1
@@ -89,7 +92,7 @@ export default function Hero() {
               <div className="col-span-1 hidden sm:flex flex-col items-center pt-2">
                 <span className="block w-px flex-1 bg-white/15" />
               </div>
-              <p className="col-span-12 sm:col-span-11 text-base lg:text-lg leading-relaxed text-white/65 mb-10 dropcap-light">
+              <p className="col-span-12 sm:col-span-11 text-base lg:text-lg leading-relaxed text-white/75 mb-10 dropcap-light">
                 {t("subtitle")}
               </p>
             </motion.div>
@@ -148,13 +151,13 @@ export default function Hero() {
             >
               <CornerTicks tone="bone" />
 
-              <div className="flex items-baseline justify-between font-mono text-[0.6rem] tracking-[0.22em] uppercase text-white/40 mb-3 border-b border-white/10 pb-3">
+              <div className="flex items-baseline justify-between font-mono text-[0.6rem] tracking-[0.22em] uppercase text-white/60 mb-3 border-b border-white/10 pb-3">
                 <span>SOUTHEAST ASIA</span>
                 <span>SCALE 1 : ∞</span>
               </div>
 
               <div className="relative w-full h-[calc(100%-110px)]">
-                <ASEANMapBg className="map-tinted absolute inset-0 w-full h-full text-white/40" />
+                <ASEANMapBg className="map-tinted absolute inset-0 w-full h-full text-white/60" />
 
                 <svg
                   viewBox="0 0 1000 800"
@@ -226,7 +229,7 @@ export default function Hero() {
                             transformOrigin: `${p.x}px ${p.y}px`,
                             cursor: "pointer",
                             filter:
-                              hovered === p.slug
+                              active === p.slug
                                 ? "drop-shadow(0 0 8px rgba(240,205,122,0.95))"
                                 : undefined,
                           }}
@@ -238,7 +241,19 @@ export default function Hero() {
                           fill="transparent"
                           onMouseEnter={() => setHovered(p.slug)}
                           onMouseLeave={() => setHovered(null)}
-                          style={{ cursor: "pointer" }}
+                          onClick={() =>
+                            setPinned((cur) => (cur === p.slug ? null : p.slug))
+                          }
+                          tabIndex={0}
+                          role="button"
+                          aria-label={`${p.iso} — view firms in ${p.capital}`}
+                          onKeyDown={(e) => {
+                            if (e.key === "Enter" || e.key === " ") {
+                              e.preventDefault();
+                              setPinned((cur) => (cur === p.slug ? null : p.slug));
+                            }
+                          }}
+                          style={{ cursor: "pointer", outline: "none" }}
                         />
                         <text
                           x={p.x}
@@ -253,7 +268,7 @@ export default function Hero() {
                           paintOrder="stroke"
                           style={{
                             letterSpacing: "0.18em",
-                            opacity: hovered === p.slug ? 1 : 0.92,
+                            opacity: active === p.slug ? 1 : 0.92,
                             transition: "opacity 240ms",
                           }}
                         >
@@ -267,30 +282,44 @@ export default function Hero() {
 
               {/* Bottom register: country detail */}
               <div className="absolute left-5 right-5 lg:left-7 lg:right-7 bottom-5 lg:bottom-7 border-t border-white/10 pt-3 min-h-[64px]">
-                {hoveredCountry && hoveredPin ? (
-                  <Link
-                    href={`/member-firms/${hoveredCountry.slug}`}
-                    className="block group"
-                  >
-                    <div className="flex items-baseline justify-between gap-3 font-mono text-[0.6rem] tracking-[0.22em] uppercase text-gold">
-                      <span>{hoveredPin.iso} · {hoveredCountry.name}</span>
-                      <span className="text-white/45">{hoveredCountry.firmCount} firm{hoveredCountry.firmCount === 1 ? "" : "s"}</span>
-                    </div>
-                    <div className="mt-1.5 flex items-baseline justify-between gap-3">
-                      <span className="font-display italic text-xl text-white group-hover:text-gold transition-colors">
-                        {hoveredCountry.nameLocal}
-                      </span>
-                      <span className="font-mono text-[0.65rem] text-white/40">
-                        {hoveredPin.coord}
-                      </span>
-                    </div>
-                  </Link>
+                {activeCountry && activePin ? (
+                  <div className="flex items-start justify-between gap-3">
+                    <Link
+                      href={`/member-firms/${activeCountry.slug}`}
+                      className="block group flex-1"
+                    >
+                      <div className="flex items-baseline justify-between gap-3 font-mono text-[0.6rem] tracking-[0.22em] uppercase text-gold">
+                        <span>{activePin.iso} · {activeCountry.name}</span>
+                        <span className="text-white/75">
+                          {activeCountry.firmCount} firm{activeCountry.firmCount === 1 ? "" : "s"}
+                        </span>
+                      </div>
+                      <div className="mt-1.5 flex items-baseline justify-between gap-3">
+                        <span className="font-display italic text-xl text-white group-hover:text-gold transition-colors">
+                          {activeCountry.nameLocal}
+                        </span>
+                        <span className="font-mono text-[0.65rem] text-white/60">
+                          {activePin.coord}
+                        </span>
+                      </div>
+                    </Link>
+                    {pinned && (
+                      <button
+                        type="button"
+                        onClick={() => setPinned(null)}
+                        aria-label="Clear selection"
+                        className="shrink-0 ml-2 -mt-1 w-6 h-6 inline-flex items-center justify-center text-white/60 hover:text-gold transition-colors cursor-pointer"
+                      >
+                        <span aria-hidden className="text-base leading-none">×</span>
+                      </button>
+                    )}
+                  </div>
                 ) : (
                   <div>
-                    <div className="font-mono text-[0.6rem] tracking-[0.22em] uppercase text-white/45">
-                      Hover any pin to inspect
+                    <div className="font-mono text-[0.6rem] tracking-[0.22em] uppercase text-white/75">
+                      Tap or hover any pin to inspect
                     </div>
-                    <div className="mt-1.5 font-display italic text-xl text-white/55">
+                    <div className="mt-1.5 font-display italic text-xl text-white/75">
                       Eleven jurisdictions, one alliance.
                     </div>
                   </div>
@@ -298,7 +327,7 @@ export default function Hero() {
               </div>
             </motion.div>
 
-            <div className="mt-3 flex items-center justify-between font-mono text-[0.6rem] tracking-[0.22em] uppercase text-white/40">
+            <div className="mt-3 flex items-center justify-between font-mono text-[0.6rem] tracking-[0.22em] uppercase text-white/60">
               <span>FIG. 01 — REGIONAL CONSPECTUS</span>
               <span>{countryPins.length} POINTS PLOTTED</span>
             </div>

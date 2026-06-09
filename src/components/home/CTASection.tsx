@@ -16,7 +16,7 @@ export default function CTASection() {
   return (
     <section className="relative bg-ink text-bone overflow-hidden">
       <div className="border-y border-bone/15">
-        <div className="container-wide flex items-center justify-between py-3 font-mono text-[0.62rem] tracking-[0.22em] uppercase text-bone/50">
+        <div className="container-wide flex items-center justify-between py-3 font-mono text-[0.62rem] tracking-[0.22em] uppercase text-bone/70">
           <span>§06 — INVITATION TO MEMBERSHIP</span>
           <span className="hidden md:inline">CHARN ISSARA TOWER · BANGKOK</span>
         </div>
@@ -34,7 +34,7 @@ export default function CTASection() {
                 {t("title")}
                 <span className="display-italic text-vermillion">.</span>
               </h2>
-              <p className="text-bone/60 text-lg leading-relaxed max-w-2xl mb-10">
+              <p className="text-bone/75 text-lg leading-relaxed max-w-2xl mb-10">
                 {t("subtitle")}
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
@@ -50,7 +50,7 @@ export default function CTASection() {
                 </Link>
               </div>
 
-              <div className="mt-12 pt-6 border-t border-bone/15 flex flex-wrap gap-x-10 gap-y-3 font-mono text-[0.6rem] tracking-[0.22em] uppercase text-bone/45">
+              <div className="mt-12 pt-6 border-t border-bone/15 flex flex-wrap gap-x-10 gap-y-3 font-mono text-[0.6rem] tracking-[0.22em] uppercase text-bone/65">
                 <span>NON-EXCLUSIVE NETWORK</span>
                 <span>VETTED BY DUE DILIGENCE</span>
                 <span>ANNUAL CONFERENCE</span>
